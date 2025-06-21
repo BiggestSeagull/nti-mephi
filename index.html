@@ -4,22 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Официальный сайт НТИ НИЯУ МИФИ</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./style-reset.css">
 </head>
 
 <body>
   <div id="layout" class="page">
-    <header id="header-wrapper">
-      gfjdskl;sss;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s
+    <!-- Навигация-->
+    <nav class="container-padding">
+      сюда воткнуть навигацию
+    </nav>
+
+    <header id="header-wrapper" class="container-padding">
+      <!-- Лого + дата-->
+      <div id="header-with-logo">
+        <a href="/" title="На главную">
+          <img src="" alt="Лого НТИ" style="margin-right: 10px;">
+          <div class="name">
+            <div>Новоуральский</div>
+            <div>Технологический</div>
+            <div>Институт НИЯУ МИФИ</div>
+          </div>
+        </a>
+        <div>
+          <span id="current-date"></span>
+          <a href="https://schools.dnevnik.ru/schedules" target="_blank">Расписание...
+            <img src="" alt="Календарь">
+          </a>
+        </div>
+      </div>
     </header>
-    <div id="content-wrapper">
-      afsd;lkllklklklklklklklklklklklklklklklklklkl <br>
-      klklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklk
+
+    <div id="content-wrapper" class="container-padding">
+      здесь идет основной контент
     </div>
   </div>
 
+  <script>
+    // Дата
+    const dateElement = document.getElementById('current-date');
+    const today = new Date();
+    const options = {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    };
+    dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+  </script>
 </body>
 
 </html>

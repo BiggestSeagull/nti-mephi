@@ -1,21 +1,37 @@
-html {
-    background-color: purple;
-}
-
 #layout {
     max-width: 1440px;
     margin: 0 auto;
 }
 
-#header-wrapper {
+/* Общий класс для блоков с отступами */
+.container-padding {
     padding: 10px 20px;
     overflow: hidden;
+}
+
+nav {
+    background-color: green;
+}
+
+#header-wrapper {
     background-color: red;
 }
 
 #content-wrapper {
-    position: relative;
-    padding: 10px 20px;
-    overflow: hidden;
     background-color: blue;
+}
+
+
+#header-with-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-with-logo a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }

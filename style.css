@@ -1,37 +1,77 @@
-#layout {
+html,
+body {
+    height: 100%;
+}
+
+
+/* Layout wrapper */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-/* Общий класс для блоков с отступами */
-.container-padding {
+/* Общий контейнер с отступами */
+.container {
     padding: 10px 20px;
     overflow: hidden;
 }
 
-nav {
-    background-color: green;
+/* Секции */
+.nav {
+    background-color: rgb(155, 236, 155);
 }
 
-#header-wrapper {
-    background-color: red;
+.header {
+    background-color: rgb(241, 145, 145);
 }
 
-#content-wrapper {
-    background-color: blue;
+.main {
+    flex: 1;
+    background-color: rgb(143, 143, 238);
 }
 
+.footer {
+    background-color: rgb(103, 202, 209);
+}
 
-#header-with-logo {
+/* Header блок */
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#header-with-logo a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
+.header-logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-schedule {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
 }

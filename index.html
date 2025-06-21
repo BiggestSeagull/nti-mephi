@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Официальный сайт НТИ НИЯУ МИФИ</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./style-reset.css">
+  <link rel="stylesheet" href="./style-reset.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div id="layout" class="page">
-    <!-- Навигация-->
-    <nav class="container-padding">
-      сюда воткнуть навигацию
+  <div class="layout">
+    <!-- Навигация -->
+    <nav class="nav container">
+      Навигация
     </nav>
 
-    <header id="header-wrapper" class="container-padding">
-      <!-- Лого + дата-->
-      <div id="header-with-logo">
-        <a href="/" title="На главную">
-          <img src="" alt="Лого НТИ" style="margin-right: 10px;">
-          <div class="name">
+    <header class="header container">
+      <div class="header-top">
+        <a href="/" class="header-logo" title="На главную">
+          <img src="" alt="Логотип НТИ" class="logo" />
+          <div class="header-name">
             <div>Новоуральский</div>
             <div>Технологический</div>
             <div>Институт НИЯУ МИФИ</div>
           </div>
         </a>
-        <div>
-          <span id="current-date"></span>
-          <a href="https://schools.dnevnik.ru/schedules" target="_blank">Расписание...
-            <img src="" alt="Календарь">
+        <div class="header-date-block">
+          <span id="current-date" class="header-date">Тут пусто</span>
+          <a href="https://schools.dnevnik.ru/schedules" target="_blank" class="header-schedule">
+            Расписание...
+            <img src="https://dummyimage.com/32x32/000/fff.png" alt="Календарь" />
           </a>
         </div>
       </div>
     </header>
 
-    <div id="content-wrapper" class="container-padding">
-      здесь идет основной контент
-    </div>
+    <main class="main container">
+      Здесь основной контент
+    </main>
+
+    <footer class="footer container">
+      Футер аааааааааааааааааааааа
+    </footer>
   </div>
 
   <script>
-    // Дата
     const dateElement = document.getElementById('current-date');
     const today = new Date();
-    const options = {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    };
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
   </script>
 </body>

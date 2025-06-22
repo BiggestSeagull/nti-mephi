@@ -47,7 +47,60 @@
     </header>
 
     <main class="main container">
-      Здесь основной контент
+      НТИ сегодня
+      <div class="news">
+        <div class="news-slides">
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/rejting-universitetov-i-kolledzhej-po-urovnyu-trudoustrojstva-i-srednej-zarplate/">
+              <div class="slide-title">
+                Рейтинг университетов и колледжей
+              </div>
+              <div class="slide-description">
+                К старту приемной кампании портал «Работа в России» опубликовал первый
+                рейтинг университетов и колледжей по уровню трудоустройства и средней зарплате. В рейтинг вошли учебные
+                заведения по всей Российской Федерации.
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/student-nti-niyau-mifi-diplomant-konferentsii-meditsina-proshloe-nastoyashhee-budushhee-v-ekaterinburge/">
+              <div class="slide-title">
+                Студент НТИ дипломант конференции
+              </div>
+              <div class="slide-description">
+                10 июня в стенах Свердловского областного медицинского колледжа состоялась научно-практическая
+                конференция «Медицина: прошлое, настоящее, будущее»...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/krugovorot-studentov-v-vuzah/">
+              <div class="slide-title">
+                Круговорот студентов в вузах
+              </div>
+              <div class="element-description">
+                Для кого-то июнь месяц ассоциируется с началом летнего отдыха и отпусков. А в вузах страны, в том числе
+                и в НТИ НИЯУ МИФИ июнь – самый насыщенный и напряжённый рабочий месяц.
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/studentov-byvshih-ne-byvaet/">
+              <div class="slide-title">
+                Студентов бывших не бывает!
+              </div>
+              <div class="slide-description">
+                В мае этого года в НТИ НИЯУ МИФИ состоялась встреча выпускников 1996 года кафедры Технология
+                машиностроения.
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+
     </main>
 
     <footer class="footer container">
@@ -60,6 +113,18 @@
     const today = new Date();
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+
+
+
+    const marquee = document.getElementById('marqueeContent');
+    var copy = document.querySelector(".marquee-track").cloneNode(true);
+    document.querySelector(".marquee-box").appendChild(copy);
+    function pauseMarquee() {
+      marquee.style.animationPlayState = 'paused';
+    }
+    function resumeMarquee() {
+      marquee.style.animationPlayState = 'running';
+    }
   </script>
 </body>
 

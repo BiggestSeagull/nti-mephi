@@ -96,22 +96,15 @@
   </div>
 
   <script>
+    // Получение даты
     const dateElement = document.getElementById('current-date');
     const today = new Date();
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
 
-
-
-    const marquee = document.getElementById('marqueeContent');
-    var copy = document.querySelector(".marquee-track").cloneNode(true);
-    document.querySelector(".marquee-box").appendChild(copy);
-    function pauseMarquee() {
-      marquee.style.animationPlayState = 'paused';
-    }
-    function resumeMarquee() {
-      marquee.style.animationPlayState = 'running';
-    }
+    // Дублирование слайдов
+    var copy = document.querySelector(".news-slides").cloneNode(true);
+    document.querySelector(".news").appendChild(copy);
   </script>
 </body>
 

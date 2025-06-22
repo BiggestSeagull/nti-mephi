@@ -54,8 +54,11 @@ body {
 
 .news-slides {
     display: inline-block;
-    white-space: nowrap;
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 10s infinite linear;
+}
+
+.news-slides:hover {
+    animation-play-state: paused;
 }
 
 .slide {
@@ -77,11 +80,11 @@ body {
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
+    from {
+        transform: translateX(0%);
     }
 
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }

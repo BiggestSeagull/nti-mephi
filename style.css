@@ -114,7 +114,7 @@ body {
 .header-name {
     display: flex;
     flex-direction: column;
-    border-left: solid 1px red;
+    border-left: solid 1px rgb(0, 0, 0);
     margin-left: 15px;
     padding-left: 15px;
 }

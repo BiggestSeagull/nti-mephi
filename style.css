@@ -54,7 +54,7 @@ body {
 
 .news-slides {
     display: inline-block;
-    animation: scroll-left 10s infinite linear;
+    animation: scroll-left 25s infinite linear;
 }
 
 .news-slides:hover {
@@ -85,7 +85,7 @@ body {
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 

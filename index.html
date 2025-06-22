@@ -19,10 +19,10 @@
     <!-- Навигация -->
     <nav class="nav">
       <div id="additional-menu">
-        Кому
+        Навигация "Кому"
       </div>
       <div id="top-menu">
-        Все остальное
+        Навигация "Об институте и прочее"
       </div>
     </nav>
 
@@ -103,8 +103,8 @@
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
 
     // Дублирование слайдов
-    var copy = document.querySelector(".news-slides").cloneNode(true);
-    document.querySelector(".news").appendChild(copy);
+    const slidesContainer = document.querySelector(".news-slides");
+    slidesContainer.innerHTML += slidesContainer.innerHTML;
   </script>
 </body>
 

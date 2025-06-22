@@ -1,21 +1,136 @@
-html {
-    background-color: purple;
+@font-face {
+    font-family: RobotoFlex;
+    src: url(./assets/RobotoFlex.ttf);
 }
 
-#layout {
+html,
+body {
+    background-color: #F8F8F8;
+    height: 100%;
+    font-size: 22px;
+    font-family: RobotoFlex;
+}
+
+
+/* Layout wrapper */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
-#header-wrapper {
+/* Общий контейнер с отступами */
+.container {
     padding: 10px 20px;
     overflow: hidden;
-    background-color: red;
 }
 
-#content-wrapper {
-    position: relative;
-    padding: 10px 20px;
+/* Секции */
+#additional-menu {
+    font-size: inherit;
+    background-color: #e1e4eb;
+}
+
+#top-menu {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.00) 15.3%), #F8F8F8;
+}
+
+.main {
+    flex: 1;
+    background-color: rgb(143, 143, 238);
+}
+
+/* Бегущая строка */
+.news {
     overflow: hidden;
-    background-color: blue;
+    white-space: nowrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    position: relative;
+}
+
+.news-slides {
+    display: inline-block;
+    animation: scroll-left 25s infinite linear;
+}
+
+.news-slides:hover {
+    animation-play-state: paused;
+}
+
+.slide {
+    display: inline-block;
+    width: 500px;
+    /* ширина одного блока */
+    margin-right: 50px;
+    /* отступ между блоками */
+}
+
+.slide-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.slide-description {
+    font-size: 14px;
+    color: #333;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.footer {
+    background-color: rgb(103, 202, 209);
+}
+
+/* Header блок */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+    border-left: solid 1px red;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.header-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-schedule {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
 }

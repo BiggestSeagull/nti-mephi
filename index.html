@@ -1,25 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./style-reset.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Официальный сайт НТИ НИЯУ МИФИ</title>
+  <link rel="stylesheet" href="./style-reset.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div id="layout" class="page">
-    <header id="header-wrapper">
-      gfjdskl;sss;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s
-    </header>
-    <div id="content-wrapper">
-      afsd;lkllklklklklklklklklklklklklklklklklklkl <br>
-      klklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklklk
+  <div class="layout">
+    <!-- Меню с настройками доступности, открывать из скрипта по нажатию на кнопку очков -->
+    <div id="for-disabled">
+
     </div>
+
+    <!-- Навигация -->
+    <nav class="nav">
+      <div id="additional-menu">
+        Навигация "Кому"
+      </div>
+      <div id="top-menu">
+        Навигация "Об институте и прочее"
+      </div>
+    </nav>
+
+    <header class="header container">
+      <div class="header-top">
+        <a href="/" class="header-logo" title="На главную">
+          <img src="" alt="Логотип НТИ" class="logo" />
+          <div class="header-name">
+            <div>Новоуральский</div>
+            <div>Технологический</div>
+            <div>Институт НИЯУ МИФИ</div>
+          </div>
+        </a>
+        <div class="header-date-block">
+          <span id="current-date" class="header-date">Тут пусто</span>
+          <a href="https://schools.dnevnik.ru/schedules" target="_blank" class="header-schedule">
+            Расписание...
+            <img src="https://dummyimage.com/32x32/000/fff.png" alt="Календарь" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main container">
+      НТИ сегодня
+      <div class="news">
+        <div class="news-slides">
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/rejting-universitetov-i-kolledzhej-po-urovnyu-trudoustrojstva-i-srednej-zarplate/">
+              <div class="slide-title">Рейтинг университетов и колледжей</div>
+              <div class="slide-description">
+                К старту приемной кампании портал «Работа в России» опубликовал рейтинг...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/student-nti-niyau-mifi-diplomant-konferentsii-meditsina-proshloe-nastoyashhee-budushhee-v-ekaterinburge/">
+              <div class="slide-title">Студент НТИ дипломант конференции</div>
+              <div class="slide-description">
+                10 июня в Свердловском медколледже состоялась конференция...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/krugovorot-studentov-v-vuzah/">
+              <div class="slide-title">Круговорот студентов в вузах</div>
+              <div class="slide-description">
+                В вузах страны июнь — самый насыщенный рабочий месяц...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/studentov-byvshih-ne-byvaet/">
+              <div class="slide-title">Студентов бывших не бывает!</div>
+              <div class="slide-description">
+                В мае в НТИ НИЯУ МИФИ прошла встреча выпускников 1996 года...
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+    <footer class="footer container">
+      Футер аааааааааааааааааааааа
+    </footer>
   </div>
 
+  <script>
+    // Получение даты
+    const dateElement = document.getElementById('current-date');
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+
+    // Дублирование слайдов
+    const slidesContainer = document.querySelector(".news-slides");
+    slidesContainer.innerHTML += slidesContainer.innerHTML;
+  </script>
 </body>
 
 </html>

@@ -94,34 +94,150 @@
 
     </main>
 
-    <footer class="footer">
-      <div class="useful-links">
-        ПОЛЕЗНЫЕ ССЫЛКИ
-      </div>
-      <div class="footer-tab-1">
-        Свидетельство Роскомнадзора о регистрации Эл № ФС77–42318. Использование новостных материалов сайта возможно
-        только при наличии активной ссылки на mephi.ru.
-      </div>
-      <div class="footer-tab-2">
-        Контакты
-      </div>
-      <div class="footer-tab-3">
-        © 2025 Национальный исследовательский ядерный университет «МИФИ»
-      </div>
-    </footer>
-  </div>
+<style>
+  /* Стили для выпадающего меню "Полезные ссылки" */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
 
-  <script>
-    // Получение даты
-    const dateElement = document.getElementById('current-date');
+  .dropdown-button {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 4px;
+  }
+
+  .dropdown-button:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* Стили для выпадающего списка */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 750px; /* Ширина для трех колонок */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+  }
+
+  /* Контейнер для колонок */
+  .dropdown-columns {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* Стиль одной колонки */
+  .dropdown-column {
+    flex: 1;
+  }
+
+  /* Стили для элементов списка */
+  .dropdown-content a {
+    color: #333;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #0066cc;
+    padding-left: 5px;
+  }
+
+  /* Показываем список при наведении */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Стили для футера */
+  .footer-tab-1, .footer-tab-2, .footer-tab-3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #666;
+    padding: 10px 0;
+  }
+
+  .footer-tab-2 {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+</style>
+
+<div class="dropdown">
+  <button class="dropdown-button">Полезные ссылки</button>
+  <div class="dropdown-content">
+    <div class="dropdown-columns">
+      <!-- Первая колонка -->
+      <div class="dropdown-column">
+        <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/nauka-i-obrazovanie-protiv-terrora" target="_blank">Наука и образование против террора</a>
+        <a href="https://new-site-2023.mephi.ru/universitet/anti-corruption" target="_blank">Противодействие коррупции</a>
+        <a href="https://new-site-2023.mephi.ru/science-and-religion" target="_blank">Диалог науки и религии</a>
+        <a href="https://na.ria.ru/" target="_blank">Социальный навигатор</a>
+        <a href="https://studyinrussia.ru/login" target="_blank">Study in Russia</a>
+      </div>
+      
+      <!-- Вторая колонка -->
+      <div class="dropdown-column">
+        <a href="https://ununevod.mephi.ru/ru/" target="_blank">Уникальная научная установка НЕВОД</a>
+        <a href="https://new-site-2023.mephi.ru/universitet/grazhdanskaya-oborona" target="_blank">Гражданская оборона</a>
+        <a href="https://rosatom-career.ru/" target="_blank">Отраслевой карьерный портал Росатома</a>
+        <a href="https://priority2030.ru/" target="_blank">Приоритет 2030</a>
+        <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/telefony-ehkstrennyh-sluzhb" target="_blank">Тревожная кнопка</a>
+      </div>
+      
+      <!-- Третья колонка -->
+      <div class="dropdown-column">
+        <a href="https://rosatom-dev.mephi.ru/" target="_blank">Центр развития технологий Росатома</a>
+        <a href="https://od.globaluni.ru/" target="_blank">Международная олимпиада для студентов</a>
+        <a href="https://yandex.ru/profi/" target="_blank">ОЛИМПИАДА «Я — ПРОФЕССИОНАЛ»</a>
+        <a href="https://endowment.mephi.ru/" target="_blank">Эндаумент-фонд НИЯУ МИФИ</a>
+        <a href="https://veteran.mephi.ru/" target="_blank">Совет ветеранов</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer-tab-1">
+  Свидетельство Роскомнадзора о регистрации Эл № ФС77–42318. Использование новостных материалов сайта возможно
+  только при наличии активной ссылки на mephi.ru.
+</div>
+<div class="footer-tab-2">
+  Контакты
+</div>
+<div class="footer-tab-3">
+  © 2025 Национальный исследовательский ядерный университет «МИФИ»
+</div>
+
+<script>
+  // Получение даты
+  const dateElement = document.getElementById('current-date');
+  if (dateElement) {
     const today = new Date();
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+  }
 
-    // Дублирование слайдов
-    const slidesContainer = document.querySelector(".news-slides");
+  // Дублирование слайдов
+  const slidesContainer = document.querySelector(".news-slides");
+  if (slidesContainer) {
     slidesContainer.innerHTML += slidesContainer.innerHTML;
-  </script>
-</body>
-
-</html>
+  }
+</script>

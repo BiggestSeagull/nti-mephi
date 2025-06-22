@@ -136,60 +136,64 @@ body {
 }
 
  /* Стилизация навигации */
-.nav {
-    background-color: #333;
+.nav-wrapper {
+  width: 100%;
+  background-color: #f0f0f0;
 }
 
-#top-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.nav-line {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  background-color: #f0f0f0;
+  flex-wrap: wrap; 
 }
 
-#top-menu > li {
-    position: relative; /* Для отображения вложенного меню */
+.nav-line ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  width: 100%; 
 }
 
-#top-menu > li > a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap; /* Предотвращает перенос текста */
+.nav-line li {
+  position: relative;
+  margin: 0 10px;
 }
 
-#top-menu > li > a:hover {
-    background-color: #555;
+.nav-line a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  display: block;
+  min-width: 150px; 
 }
 
-  /* Выпадающее меню */
-.dropdown {
-    display: none; /* По умолчанию скрыто */
-    position: absolute;
-    top: 100%; /* Расположение под родительским элементом */
-    left: 0;
-    background-color: #333;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: max-content; /* Автоматическая ширина на основе содержимого */
-    z-index: 1; /* Обеспечивает видимость наверху других элементов */
+.nav-line ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  width: auto; 
+  box-sizing: border-box;
 }
 
-.dropdown li a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap; /* Предотвращает перенос текста */
+.nav-line ul ul li {
+  white-space: nowrap; 
+  padding: 0;
 }
 
-.dropdown li a:hover {
-    background-color: #555;
+.nav-line ul ul ul {
+  left: 100%;
+  top: 0;
 }
 
-/* Показываем выпадающее меню при наведении */
-#top-menu > li:hover .dropdown {
-    display: block;
+.nav-line li a:hover {
+  background-color: #eee;
 }

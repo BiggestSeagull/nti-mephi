@@ -136,35 +136,35 @@ body {
 }
 
  /* Стилизация навигации */
-  .nav {
+.nav {
     background-color: #333;
-  }
+}
 
-  #top-menu {
+#top-menu {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-  }
+}
 
-  #top-menu > li {
+#top-menu > li {
     position: relative; /* Для отображения вложенного меню */
-  }
+}
 
-  #top-menu > li > a {
+#top-menu > li > a {
     display: block;
     padding: 10px 15px;
     color: white;
     text-decoration: none;
     white-space: nowrap; /* Предотвращает перенос текста */
-  }
+}
 
-  #top-menu > li > a:hover {
+#top-menu > li > a:hover {
     background-color: #555;
-  }
+}
 
   /* Выпадающее меню */
-  .dropdown {
+.dropdown {
     display: none; /* По умолчанию скрыто */
     position: absolute;
     top: 100%; /* Расположение под родительским элементом */
@@ -175,21 +175,21 @@ body {
     margin: 0;
     min-width: max-content; /* Автоматическая ширина на основе содержимого */
     z-index: 1; /* Обеспечивает видимость наверху других элементов */
-  }
+}
 
-  .dropdown li a {
+.dropdown li a {
     display: block;
     padding: 10px 15px;
     color: white;
     text-decoration: none;
     white-space: nowrap; /* Предотвращает перенос текста */
-  }
+}
 
-  .dropdown li a:hover {
+.dropdown li a:hover {
     background-color: #555;
-  }
+}
 
-  /* Показываем выпадающее меню при наведении */
-  #top-menu > li:hover .dropdown {
+/* Показываем выпадающее меню при наведении */
+#top-menu > li:hover .dropdown {
     display: block;
-  }
+}

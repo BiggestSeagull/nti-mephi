@@ -44,6 +44,7 @@ body {
 
 .nti-now {
     text-align: center;
+    font-size: 36px;
 }
 
 /* Бегущая строка */
@@ -67,7 +68,7 @@ body {
 
 .slide {
     display: inline-block;
-    width: 500px;
+    max-width: 500px;
     /* ширина одного блока */
     margin-right: 50px;
     /* отступ между блоками */

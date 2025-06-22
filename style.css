@@ -58,6 +58,9 @@ body {
 .header-name {
     display: flex;
     flex-direction: column;
+    border-left: solid 1px red;
+    margin-left: 15px;
+    padding-left: 15px;
 }
 
 .header-date-block {

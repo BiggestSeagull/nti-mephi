@@ -64,7 +64,47 @@
     </header>
 
     <main class="main container">
-      Здесь основной контент
+      НТИ сегодня
+      <div class="news">
+        <div class="news-slides">
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/rejting-universitetov-i-kolledzhej-po-urovnyu-trudoustrojstva-i-srednej-zarplate/">
+              <div class="slide-title">Рейтинг университетов и колледжей</div>
+              <div class="slide-description">
+                К старту приемной кампании портал «Работа в России» опубликовал рейтинг...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a
+              href="https://nti.mephi.ru/student-nti-niyau-mifi-diplomant-konferentsii-meditsina-proshloe-nastoyashhee-budushhee-v-ekaterinburge/">
+              <div class="slide-title">Студент НТИ дипломант конференции</div>
+              <div class="slide-description">
+                10 июня в Свердловском медколледже состоялась конференция...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/krugovorot-studentov-v-vuzah/">
+              <div class="slide-title">Круговорот студентов в вузах</div>
+              <div class="slide-description">
+                В вузах страны июнь — самый насыщенный рабочий месяц...
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://nti.mephi.ru/studentov-byvshih-ne-byvaet/">
+              <div class="slide-title">Студентов бывших не бывает!</div>
+              <div class="slide-description">
+                В мае в НТИ НИЯУ МИФИ прошла встреча выпускников 1996 года...
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
     </main>
 
     <footer class="footer container">
@@ -73,10 +113,15 @@
   </div>
 
   <script>
+    // Получение даты
     const dateElement = document.getElementById('current-date');
     const today = new Date();
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+
+    // Дублирование слайдов
+    const slidesContainer = document.querySelector(".news-slides");
+    slidesContainer.innerHTML += slidesContainer.innerHTML;
   </script>
 </body>
 

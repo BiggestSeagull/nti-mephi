@@ -102,7 +102,7 @@ body {
     padding-bottom: 10px;
 }
 
-/* Позади видео */
+/* Позади видео (не работает)*/
 /* #block-block-17 {
     margin-top: -16px;
     width: 864px;
@@ -224,18 +224,6 @@ body {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    gap: 6px;
-}
-
-/* Footer блоки */
-.footer {
-    background-color: rgb(103, 202, 209);
-}
-
-.useful-links {
-    background-color: rgb(214, 106, 98);
-    display: inline-flex;
-    align-items: center;
     gap: 6px;
 }
 

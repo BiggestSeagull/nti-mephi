@@ -94,252 +94,147 @@
 
     </main>
 
-<style>
-  /* Основные стили контейнера */
-  .dropdown-wrapper {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-  }
+    <div class="dropdown-wrapper">
+      <button class="dropdown-button" id="dropdownButton">Полезные ссылки</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <div class="dropdown-inner">
+          <div class="dropdown-title">Полезные ссылки</div>
+          <div class="dropdown-columns">
+            <!-- Первая колонка -->
+            <div class="dropdown-column">
+              <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/nauka-i-obrazovanie-protiv-terrora"
+                target="_blank">
+                <img src="assets/img/useful-links/anti-terror.png" class="link-icon" alt="">
+                Наука и образование против террора
+              </a>
+              <a href="https://new-site-2023.mephi.ru/universitet/anti-corruption" target="_blank">
+                <img src="assets/img/useful-links/anti-corruption.png" class="link-icon" alt="">
+                Противодействие коррупции
+              </a>
+              <a href="https://new-site-2023.mephi.ru/science-and-religion" target="_blank">
+                <img src="assets/img/useful-links/science-religion.png" class="link-icon" alt="">
+                Диалог науки и религии
+              </a>
+              <a href="https://na.ria.ru/" target="_blank">
+                <img src="assets/img/useful-links/soc-navigator.png" class="link-icon" alt="">
+                Социальный навигатор
+              </a>
+            </div>
 
-  /* Стили кнопки */
-  .dropdown-button {
-    background-color: transparent;
-    color: #333;
-    padding: 10px 15px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    white-space: nowrap;
-    position: relative;
-    z-index: 2;
-  }
+            <!-- Вторая колонка -->
+            <div class="dropdown-column">
+              <a href="https://ununevod.mephi.ru/ru/" target="_blank">
+                <img src="assets/img/useful-links/nevod.png" class="link-icon" alt="">
+                Уникальная научная установка НЕВОД
+              </a>
+              <a href="https://new-site-2023.mephi.ru/universitet/grazhdanskaya-oborona" target="_blank">
+                <img src="assets/img/useful-links/e1242_mchs.png" class="link-icon" alt="">
+                Гражданская оборона
+              </a>
+              <a href="https://rosatom-career.ru/" target="_blank">
+                <img src="assets/img/useful-links/frame_1.png" class="link-icon" alt="">
+                Отраслевой карьерный портал Росатома
+              </a>
+              <a href="https://priority2030.ru/" target="_blank">
+                <img src="assets/img/useful-links/priority2030.png" class="link-icon" alt="">
+                Приоритет 2030
+              </a>
+            </div>
 
-  .dropdown-button:hover {
-    color: #0066cc;
-  }
+            <!-- Третья колонка -->
+            <div class="dropdown-column">
+              <a href="https://rosatom-dev.mephi.ru/" target="_blank">
+                <img src="assets/img/useful-links/one_line_crtr.png" class="link-icon" alt="">
+                Центр развития технологий Росатома
+              </a>
+              <a href="https://od.globaluni.ru/" target="_blank">
+                <img src="assets/img/useful-links/open-doors.png" class="link-icon" alt="">
+                Международная олимпиада для студентов
+              </a>
+              <a href="https://yandex.ru/profi/" target="_blank">
+                <img src="assets/img/useful-links/prof.png" class="link-icon" alt="">
+                Олимпиада «Я — профессионал»
+              </a>
+              <a href="https://endowment.mephi.ru/" target="_blank">
+                <img src="assets/img/useful-links/endowment.png" class="link-icon" alt="">
+                Эндаумент-фонд НИЯУ МИФИ
+              </a>
+            </div>
 
-  /* Стили выпадающего блока */
-  .dropdown-content {
-    position: relative;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    z-index: 1;
-    margin-top: -1px;
-  }
-
-  .dropdown-content.active {
-    max-height: 600px; /* Увеличили высоту для 4 строк */
-  }
-
-  /* Внутренний контейнер с контентом */
-  .dropdown-inner {
-    background-color: #fff;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    padding: 20px;
-    width: 1200px; /* Увеличили ширину для 4 колонок */
-    margin: 0 auto;
-    border-top: 1px solid #f0f0f0;
-  }
-
-  /* Заголовок меню */
-  .dropdown-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #0066cc;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  /* Контейнер для колонок */
-  .dropdown-columns {
-    display: flex;
-    gap: 40px; /* Увеличили отступ между колонками */
-  }
-
-  /* Стиль колонки */
-  .dropdown-column {
-    flex: 1;
-  }
-
-  /* Стили ссылок */
-  .dropdown-content a {
-    color: #333;
-    padding: 10px 0; /* Увеличили отступы */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    transition: all 0.2s ease;
-    font-family: 'Open Sans', sans-serif;
-    border-bottom: 1px solid #f5f5f5;
-    gap: 12px;
-    line-height: 1.4;
-    min-height: 44px; /* Фиксированная высота строки */
-  }
-
-  .dropdown-content a:hover {
-    color: #0066cc;
-    background-color: #f9f9f9;
-  }
-
-  /* Стили иконок */
-  .link-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-</style>
-
-<div class="dropdown-wrapper">
-  <button class="dropdown-button" id="dropdownButton">Полезные ссылки</button>
-  <div class="dropdown-content" id="dropdownContent">
-    <div class="dropdown-inner">
-      <div class="dropdown-title">Полезные ссылки</div>
-      <div class="dropdown-columns">
-        <!-- Первая колонка -->
-        <div class="dropdown-column">
-          <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/nauka-i-obrazovanie-protiv-terrora" target="_blank">
-            <img src="assets/img/useful-links/anti-terror.png" class="link-icon" alt="">
-            Наука и образование против террора
-          </a>
-          <a href="https://new-site-2023.mephi.ru/universitet/anti-corruption" target="_blank">
-            <img src="assets/img/useful-links/anti-corruption.png" class="link-icon" alt="">
-            Противодействие коррупции
-          </a>
-          <a href="https://new-site-2023.mephi.ru/science-and-religion" target="_blank">
-            <img src="assets/img/useful-links/science-religion.png" class="link-icon" alt="">
-            Диалог науки и религии
-          </a>
-          <a href="https://na.ria.ru/" target="_blank">
-            <img src="assets/img/useful-links/soc-navigator.png" class="link-icon" alt="">
-            Социальный навигатор
-          </a>
-        </div>
-        
-        <!-- Вторая колонка -->
-        <div class="dropdown-column">
-          <a href="https://ununevod.mephi.ru/ru/" target="_blank">
-            <img src="assets/img/useful-links/nevod.png" class="link-icon" alt="">
-            Уникальная научная установка НЕВОД
-          </a>
-          <a href="https://new-site-2023.mephi.ru/universitet/grazhdanskaya-oborona" target="_blank">
-            <img src="assets/img/useful-links/e1242_mchs.png" class="link-icon" alt="">
-            Гражданская оборона
-          </a>
-          <a href="https://rosatom-career.ru/" target="_blank">
-            <img src="assets/img/useful-links/frame_1.png" class="link-icon" alt="">
-            Отраслевой карьерный портал Росатома
-          </a>
-          <a href="https://priority2030.ru/" target="_blank">
-            <img src="assets/img/useful-links/priority2030.png" class="link-icon" alt="">
-            Приоритет 2030
-          </a>
-        </div>
-        
-        <!-- Третья колонка -->
-        <div class="dropdown-column">
-          <a href="https://rosatom-dev.mephi.ru/" target="_blank">
-            <img src="assets/img/useful-links/one_line_crtr.png" class="link-icon" alt="">
-            Центр развития технологий Росатома
-          </a>
-          <a href="https://od.globaluni.ru/" target="_blank">
-            <img src="assets/img/useful-links/open-doors.png" class="link-icon" alt="">
-            Международная олимпиада для студентов
-          </a>
-          <a href="https://yandex.ru/profi/" target="_blank">
-            <img src="assets/img/useful-links/prof.png" class="link-icon" alt="">
-            Олимпиада «Я — профессионал»
-          </a>
-          <a href="https://endowment.mephi.ru/" target="_blank">
-            <img src="assets/img/useful-links/endowment.png" class="link-icon" alt="">
-            Эндаумент-фонд НИЯУ МИФИ
-          </a>
-        </div>
-        
-        <!-- Четвертая колонка -->
-        <div class="dropdown-column">
-          <a href="https://studyinrussia.ru/login" target="_blank">
-            <img src="assets/img/useful-links/study-in-russia.png" class="link-icon" alt="">
-            Study in Russia
-          </a>
-          <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/telefony-ehkstrennyh-sluzhb" target="_blank">
-            <img src="assets/img/useful-links/warning.png" class="link-icon" alt="">
-            Тревожная кнопка
-          </a>
-          <a href="https://veteran.mephi.ru/" target="_blank">
-            <img src="assets/img/useful-links/veteran2024.png" class="link-icon" alt="">
-            Совет ветеранов
-          </a>
+            <!-- Четвертая колонка -->
+            <div class="dropdown-column">
+              <a href="https://studyinrussia.ru/login" target="_blank">
+                <img src="assets/img/useful-links/study-in-russia.png" class="link-icon" alt="">
+                Study in Russia
+              </a>
+              <a href="https://new-site-2023.mephi.ru/universitet/voprosy-bezopasnosti/telefony-ehkstrennyh-sluzhb"
+                target="_blank">
+                <img src="assets/img/useful-links/warning.png" class="link-icon" alt="">
+                Тревожная кнопка
+              </a>
+              <a href="https://veteran.mephi.ru/" target="_blank">
+                <img src="assets/img/useful-links/veteran2024.png" class="link-icon" alt="">
+                Совет ветеранов
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<script>
-  const dropdownButton = document.getElementById('dropdownButton');
-  const dropdownContent = document.getElementById('dropdownContent');
-  let isDropdownOpen = false;
+    <div class="footer-tab-1">
+      Свидетельство Роскомнадзора о регистрации Эл № ФС77–42318. Использование новостных материалов сайта возможно
+      только при наличии активной ссылки на mephi.ru.
+    </div>
+    <div class="footer-tab-2">
+      Контакты
+    </div>
+    <div class="footer-tab-3">
+      © 2025 Национальный исследовательский ядерный университет «МИФИ»
+    </div>
 
-  // Обработчик клика по кнопке
-  dropdownButton.addEventListener('click', function(e) {
-    e.stopPropagation();
-    isDropdownOpen = !isDropdownOpen;
-    
-    if (isDropdownOpen) {
-      dropdownContent.classList.add('active');
-    } else {
-      dropdownContent.classList.remove('active');
-    }
-  });
+    <script>
+      // Получение даты
+      const dateElement = document.getElementById('current-date');
+      if (dateElement) {
+        const today = new Date();
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('ru-RU', options);
+      }
 
-  // Закрытие при клике вне меню
-  document.addEventListener('click', function() {
-    if (isDropdownOpen) {
-      dropdownContent.classList.remove('active');
-      isDropdownOpen = false;
-    }
-  });
+      // Дублирование слайдов
+      const slidesContainer = document.querySelector(".news-slides");
+      if (slidesContainer) {
+        slidesContainer.innerHTML += slidesContainer.innerHTML;
+      }
 
-  // Предотвращаем закрытие при клике внутри меню
-  dropdownContent.addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-</script>
+      // Полезные ссылки
+      const dropdownButton = document.getElementById('dropdownButton');
+      const dropdownContent = document.getElementById('dropdownContent');
+      let isDropdownOpen = false;
 
-<div class="footer-tab-1">
-  Свидетельство Роскомнадзора о регистрации Эл № ФС77–42318. Использование новостных материалов сайта возможно
-  только при наличии активной ссылки на mephi.ru.
-</div>
-<div class="footer-tab-2">
-  Контакты
-</div>
-<div class="footer-tab-3">
-  © 2025 Национальный исследовательский ядерный университет «МИФИ»
-</div>
+      // Обработчик клика по кнопке
+      dropdownButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        isDropdownOpen = !isDropdownOpen;
 
-<script>
-  // Получение даты
-  const dateElement = document.getElementById('current-date');
-  if (dateElement) {
-    const today = new Date();
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    dateElement.textContent = today.toLocaleDateString('ru-RU', options);
-  }
+        if (isDropdownOpen) {
+          dropdownContent.classList.add('active');
+        } else {
+          dropdownContent.classList.remove('active');
+        }
+      });
 
-  // Дублирование слайдов
-  const slidesContainer = document.querySelector(".news-slides");
-  if (slidesContainer) {
-    slidesContainer.innerHTML += slidesContainer.innerHTML;
-  }
-</script>
+      // Закрытие при клике вне меню
+      document.addEventListener('click', function () {
+        if (isDropdownOpen) {
+          dropdownContent.classList.remove('active');
+          isDropdownOpen = false;
+        }
+      });
+
+      // Предотвращаем закрытие при клике внутри меню
+      dropdownContent.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    </script>

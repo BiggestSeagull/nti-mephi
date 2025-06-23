@@ -140,11 +140,113 @@ body {
     background-color: rgb(103, 202, 209);
 }
 
-.useful-links {
-    background-color: rgb(214, 106, 98);
-    display: inline-flex;
+/* Основные стили контейнера */
+.dropdown-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+/* Стили кнопки */
+.dropdown-button {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+.dropdown-button:hover {
+    color: #0066cc;
+}
+
+/* Стили выпадающего блока */
+.dropdown-content {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    z-index: 1;
+    margin-top: -1px;
+}
+
+.dropdown-content.active {
+    max-height: 600px;
+    /* Увеличили высоту для 4 строк */
+}
+
+/* Внутренний контейнер с контентом */
+.dropdown-inner {
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    width: 1200px;
+    /* Увеличили ширину для 4 колонок */
+    margin: 0 auto;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Заголовок меню */
+.dropdown-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0066cc;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Контейнер для колонок */
+.dropdown-columns {
+    display: flex;
+    gap: 40px;
+    /* Увеличили отступ между колонками */
+}
+
+/* Стиль колонки */
+.dropdown-column {
+    flex: 1;
+}
+
+/* Стили ссылок */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 0;
+    /* Увеличили отступы */
+    text-decoration: none;
+    display: flex;
     align-items: center;
-    gap: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #f5f5f5;
+    gap: 12px;
+    line-height: 1.4;
+    min-height: 44px;
+    /* Фиксированная высота строки */
+}
+
+.dropdown-content a:hover {
+    color: #0066cc;
+    background-color: #f9f9f9;
+}
+
+/* Стили иконок */
+.link-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .footer-tab-1 {

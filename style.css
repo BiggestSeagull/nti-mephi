@@ -49,9 +49,7 @@ body {
 
 
 /* НТИ — ядерный институт */
-.header {
-    padding-top: 100px;
-}
+.header {}
 
 .header-row {
     display: flex;

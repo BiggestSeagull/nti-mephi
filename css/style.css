@@ -1,11 +1,11 @@
 @font-face {
     font-family: RobotoFlex;
-    src: url(./assets/RobotoFlex.ttf);
+    src: url(../assets/RobotoFlex.ttf);
 }
 
 @font-face {
     font-family: Ruda;
-    src: url(./assets/Ruda.ttf);
+    src: url(../assets/Ruda.ttf);
 }
 
 html,

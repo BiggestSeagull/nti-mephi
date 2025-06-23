@@ -3,12 +3,21 @@
     src: url(./assets/RobotoFlex.ttf);
 }
 
+@font-face {
+    font-family: Ruda;
+    src: url(./assets/Ruda.ttf);
+}
+
 html,
 body {
     background-color: #F8F8F8;
     height: 100%;
     font-size: 22px;
     font-family: RobotoFlex;
+}
+
+.blue {
+    color: #0078F6;
 }
 
 
@@ -37,12 +46,90 @@ body {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.00) 15.3%), #F8F8F8;
 }
 
+/* НТИ — ядерный институт */
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.header-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+/* Первая колонка */
+.header-mephi-title {
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    font-family: Ruda;
+    font-size: 62px;
+    font-weight: 900;
+}
+
+
+/* Вторая колонка */
+.front-header-video {
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin-top: 195px;
+    margin-left: 141px;
+    transition: all 0.25s;
+    z-index: 10;
+}
+
+.front-header-video .basic-close-button {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #333;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Позади видео */
+/* #block-block-17 {
+    margin-top: -16px;
+    width: 864px;
+    height: 850px;
+    background-image: url(./assets/decor-header-video.svg);
+    background-size: 100% 100%;
+    grid-area: mephi-header-video;
+} */
+
+/* Перед видео */
+.front-header-video::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-image: url(./assets/img/main-video-play-icon.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 200px;
+    left: 90px;
+    z-index: 10;
+    cursor: pointer;
+}
+
 .main {
     flex: 1;
-
 }
 
 .nti-now {
+    font-family: Ruda;
     text-align: center;
     font-size: 36px;
 }

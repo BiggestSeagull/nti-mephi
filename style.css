@@ -70,7 +70,6 @@ body {
 /* Первая колонка */
 .header-mephi-title {
     margin: auto;
-    border: 3px solid green;
     padding: 10px;
     font-family: Ruda;
     font-size: 62px;

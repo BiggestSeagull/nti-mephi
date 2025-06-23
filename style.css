@@ -30,6 +30,69 @@ body {
     margin: 0 auto;
 }
 
+/* Стилизация навигации */
+.nav-wrapper {
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.nav-line {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background-color: #f0f0f0;
+    flex-wrap: wrap;
+}
+
+.nav-line ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav-line li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.nav-line a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    min-width: 150px;
+}
+
+.nav-line ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.nav-line ul ul li {
+    white-space: nowrap;
+    padding: 0;
+}
+
+.nav-line ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.nav-line li a:hover {
+    background-color: #eee;
+}
+
 /* Общий контейнер с отступами */
 .container {
     padding: 10px 20px;

@@ -49,8 +49,6 @@ body {
 
 
 /* НТИ — ядерный институт */
-.header {}
-
 .header-row {
     display: flex;
     flex-direction: row;

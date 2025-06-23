@@ -7,8 +7,8 @@
   <title>Официальный сайт НТИ НИЯУ МИФИ</title>
   <!-- Сюда иконку для вкладки. НО!! Сначала преобразовать картинку в формат .ico Например тут: https://favicon.io/-->
   <link rel="icon" href="#">
-  <link rel="stylesheet" href="./style-reset.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css/style-reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -301,14 +301,6 @@
             src="./assets/front-header-video-preview.mp4" width="auto" style="cursor: auto;">&nbsp;</video>
         </div>
       </div>
-
-      <!-- <div class="header-date-block">
-          <span id="current-date" class="header-date">Тут пусто</span>
-          <a href="https://schools.dnevnik.ru/schedules" target="_blank" class="header-schedule">
-            Расписание...
-            <img src="https://dummyimage.com/32x32/000/fff.png" alt="Календарь" />
-          </a>
-        </div> -->
     </header>
 
     <main class="main">
@@ -500,80 +492,7 @@
 
   </div>
 
-  <script>
-    // Получение даты не актуально
-    // const dateElement = document.getElementById('current-date');
-    // if (dateElement) {
-    //   const today = new Date();
-    //   const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    //   dateElement.textContent = today.toLocaleDateString('ru-RU', options);
-    // }
-
-    // Навигация
-    document.querySelectorAll('.nav-line li').forEach(function (item) {
-      item.addEventListener('mouseenter', function () {
-        const submenu = this.querySelector('ul');
-        if (submenu) {
-          submenu.style.display = 'block';
-
-          // Сбрасываем стиль перед вычислениями
-          submenu.style.left = '0';
-          submenu.style.right = 'auto';
-
-          // Получаем позицию и размеры подменю и родительского элемента
-          const rect = submenu.getBoundingClientRect();
-
-          // Проверяем, выходит ли подменю за правую границу
-          if (rect.right > window.innerWidth) {
-            submenu.style.left = 'auto';
-            submenu.style.right = '0';
-          }
-        }
-      });
-
-      item.addEventListener('mouseleave', function () {
-        const submenu = this.querySelector('ul');
-        if (submenu) {
-          submenu.style.display = 'none';
-        }
-      });
-    });
-
-
-    // Дублирование слайдов
-    const slidesContainer = document.querySelector(".news-slides");
-    if (slidesContainer) {
-      slidesContainer.innerHTML += slidesContainer.innerHTML;
-    }
-
-
-    // Полезные ссылки
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownContent = document.getElementById('dropdownContent');
-    let isDropdownOpen = false;
-    // Обработчик клика по кнопке
-    dropdownButton.addEventListener('click', function (e) {
-      e.stopPropagation();
-      isDropdownOpen = !isDropdownOpen;
-
-      if (isDropdownOpen) {
-        dropdownContent.classList.add('active');
-      } else {
-        dropdownContent.classList.remove('active');
-      }
-    });
-    // Закрытие при клике вне меню
-    document.addEventListener('click', function () {
-      if (isDropdownOpen) {
-        dropdownContent.classList.remove('active');
-        isDropdownOpen = false;
-      }
-    });
-    // Предотвращаем закрытие при клике внутри меню
-    dropdownContent.addEventListener('click', function (e) {
-      e.stopPropagation();
-    });
-  </script>
+  <script type="text/javascript" async src="./js/script.js"></script>
 </body>
 
 </html>

@@ -551,6 +551,63 @@ body {
     padding: 72px 105px;
 }
 
+.footer-title {
+    margin: 0;
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-family: 'Ruda';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.column-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.column-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    color: #a1a7b5;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.content .column .column-content a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+* {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .content {
     display: flex;
     gap: 100px;
@@ -564,7 +621,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    color: #a1a7b5;
+    color: #ffffff;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -575,4 +632,5 @@ body {
     background-color: #2e3443;
     display: flex;
     padding: 40px 105px;
+    color: #ffffff;
 }

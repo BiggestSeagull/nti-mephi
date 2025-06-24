@@ -1,0 +1,56 @@
+/* Кастомные стрелки-галочки */
+.glide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4285F4; /* Синий Google-цвет */
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 2;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+}
+
+.glide__arrow:hover {
+    background-color: #3367D6; /* Темнее при наведении */
+    transform: translateY(-50%) scale(1.1);
+}
+
+.glide__arrow svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.glide__arrow--left {
+    left: 20px;
+}
+
+.glide__arrow--right {
+    right: 20px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .glide__arrow {
+        width: 36px;
+        height: 36px;
+    }
+    .glide__arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+.glide__arrow:hover svg {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+}

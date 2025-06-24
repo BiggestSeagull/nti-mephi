@@ -9,6 +9,10 @@
   <link rel="icon" href="#">
   <link rel="stylesheet" href="./css/style-reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- <link rel="stylesheet" href="./css/glide.core.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
 </head>
 
 <body>
@@ -361,6 +365,34 @@
 
       <div class="mephi-life">
         <!-- Сюда вставлять код. Для Семёна -->
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <img src="./assets/img/1.jpg" alt="1">
+              </li>
+              <li class="glide__slide">
+                <img src="./assets/img/2.jpg" alt="2">
+              </li>
+              <li class="glide__slide">
+                <img src="./assets/img/3.jpg" alt="3">
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       <!-- <div class="important-news">
@@ -500,6 +532,7 @@
   </div>
 
   <script type="text/javascript" async src="./js/script.js"></script>
+  <script type="text/javascript" async src="./js/glide.min.js"></script>
 </body>
 
 </html>

@@ -485,7 +485,7 @@ body {
     background-color: #f2f4f8;
     display: flex;
     flex-flow: row wrap;
-    padding: 32px 105px 48px 105px;
+    padding: 30px 100px 30px 100px;
     justify-content: space-between;
     align-items: center;
 }
@@ -523,14 +523,27 @@ body {
 }
 
 .footer-menu .links-1 a {
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
 }
 
-.footer-menu .links-2 a {
+.footer-menu .links-1 a:hover {
     font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: #0078f6;
+}
+
+.footer-menu .links-2 a {
+    font-size: 14px;
     line-height: 36px;
+}
+
+.footer-menu .links-2 a:hover {
+    font-size: 16px;
+    line-height: 36px;
+    color: #0078f6;
 }
 
 .information {
@@ -540,33 +553,45 @@ body {
     width: 478px;
     padding: 48px;
     color: #626c84;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 150%;
     background: #ffffff;
+}
+
+.information a {
+    color: #17171a;
+    font-size: 14px;
+}
+
+.information a:hover {
+    color: #0078f6;
+    font-size: 14px;
+}
+
+.footer-title-1 {
+    color: #4e566a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
 }
 
 /* Стили на нижней части футера */
 .footer-tab-2 {
     background-color: #3b414f;
-    padding: 72px 105px;
+    padding: 65px 105px;
 }
 
-.footer-title {
+.footer-title-2 {
     margin: 0;
     margin-bottom: 32px;
     color: #ffffff;
-    font-family: 'Ruda';
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 130%;
 }
 
 .column-title {
-    font-size: 24px;
-    color: #ffffff;
     margin-bottom: 32px;
-    font-style: normal;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 600;
     line-height: 110%;
 }
@@ -574,12 +599,9 @@ body {
 .column-content{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 16px;
     color: #a1a7b5;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 14px;
     line-height: 120%;
 }
 
@@ -588,24 +610,10 @@ body {
     text-decoration: none;
 }
 
-
-
-* {
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    -webkit-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -webkit-font-smoothing: antialiased;
-    text-size-adjust: none;
-}
-user agent stylesheet
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
+.content .column .column-content a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    color: #0078f6;
 }
 
 .content {
@@ -617,20 +625,10 @@ a:-webkit-any-link {
     width: 476px;
 }
 
-.column-title {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: #ffffff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-}
-
 .footer-tab-3 {
     background-color: #2e3443;
     display: flex;
-    padding: 40px 105px;
+    padding: 30px 105px;
     color: #ffffff;
+    font-size: 18px;
 }

@@ -62,3 +62,7 @@ document.addEventListener('click', function () {
 dropdownContent.addEventListener('click', function (e) {
     e.stopPropagation();
 });
+
+
+// Текущий год для футера
+document.getElementById("year").textContent = new Date().getFullYear();

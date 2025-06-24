@@ -480,15 +480,155 @@ body {
     flex-shrink: 0;
 }
 
-
+/* Стили для верней части футера */
 .footer-tab-1 {
-    background-color: rgb(108, 214, 98);
+    background-color: #f2f4f8;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 100px 30px 100px;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.social {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 34px;
+}
+
+.info {
+    margin-top: 32px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    margin-top: 48px;
+    display: flex;
+    gap: 126px;
+}
+
+.links-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.links-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-menu .links-1 a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.footer-menu .links-1 a:hover {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: #0078f6;
+}
+
+.footer-menu .links-2 a {
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.footer-menu .links-2 a:hover {
+    font-size: 16px;
+    line-height: 36px;
+    color: #0078f6;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 478px;
+    padding: 48px;
+    color: #626c84;
+    font-size: 14px;
+    line-height: 150%;
+    background: #ffffff;
+}
+
+.information a {
+    color: #17171a;
+    font-size: 14px;
+}
+
+.information a:hover {
+    color: #0078f6;
+    font-size: 14px;
+}
+
+.footer-title-1 {
+    color: #4e566a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+/* Стили на нижней части футера */
 .footer-tab-2 {
-    background-color: rgb(110, 98, 214);
+    background-color: #3b414f;
+    padding: 65px 105px;
+}
+
+.footer-title-2 {
+    margin: 0;
+    margin-bottom: 32px;
+    color: #ffffff;
+    line-height: 130%;
+}
+
+.column-title {
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.column-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #a1a7b5;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.content .column .column-content a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.content .column .column-content a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    color: #0078f6;
+}
+
+.content {
+    display: flex;
+    gap: 100px;
+}
+
+.column-1 {
+    width: 476px;
 }
 
 .footer-tab-3 {
-    background-color: rgb(170, 103, 209)
+    background-color: #2e3443;
+    display: flex;
+    padding: 30px 105px;
+    color: #ffffff;
+    font-size: 18px;
 }

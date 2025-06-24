@@ -548,8 +548,31 @@ body {
 /* Стили на нижней части футера */
 .footer-tab-2 {
     background-color: #3b414f;
+    padding: 72px 105px;
+}
+
+.content {
+    display: flex;
+    gap: 100px;
+}
+
+.column-1 {
+    width: 476px;
+}
+
+.column-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #a1a7b5;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
 }
 
 .footer-tab-3 {
-    background-color: #2e3443
+    background-color: #2e3443;
+    display: flex;
+    padding: 40px 105px;
 }

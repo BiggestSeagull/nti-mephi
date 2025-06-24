@@ -1,0 +1,600 @@
+@font-face {
+    font-family: RobotoFlex;
+    src: url(../assets/RobotoFlex.ttf);
+}
+
+@font-face {
+    font-family: Ruda;
+    src: url(../assets/Ruda.ttf);
+}
+
+html,
+body {
+    background-color: #F8F8F8;
+    height: 100%;
+    font-size: 22px;
+    font-family: RobotoFlex;
+}
+
+.blue {
+    color: #0078F6;
+}
+
+
+/* Layout wrapper */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Стилизация навигации */
+.nav-wrapper {
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.nav-line {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background-color: #f0f0f0;
+    flex-wrap: wrap;
+}
+
+.nav-line ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav-line li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.nav-line a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    min-width: 150px;
+}
+
+.nav-line ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.nav-line ul ul li {
+    white-space: nowrap;
+    padding: 0;
+}
+
+.nav-line ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.nav-line li a:hover {
+    background-color: #eee;
+}
+
+/* Общий контейнер с отступами */
+.container {
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+/* Секции */
+#additional-menu {
+    font-size: inherit;
+    background-color: #e1e4eb;
+}
+
+#top-menu {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.00) 15.3%), #F8F8F8;
+}
+
+
+
+/* НТИ — ядерный институт */
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.header-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+/* Первая колонка */
+.header-mephi-title {
+    margin: auto;
+    padding: 10px;
+    font-family: Ruda;
+    font-size: 62px;
+    font-weight: 900;
+}
+
+
+/* Вторая колонка */
+.front-header-video {
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: 100px;
+    transition: all 0.25s;
+    z-index: 10;
+}
+
+.front-header-video .basic-close-button {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #333;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Позади видео (не работает)*/
+/* #block-block-17 {
+    margin-top: -16px;
+    width: 864px;
+    height: 850px;
+    background-image: url(./assets/decor-header-video.svg);
+    background-size: 100% 100%;
+    grid-area: mephi-header-video;
+} */
+
+/* Иконка старта перед видео */
+/* .front-header-video::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-image: url(./assets/img/main-video-play-icon.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 200px;
+    left: 90px;
+    z-index: 10;
+    cursor: pointer;
+} */
+
+.main {
+    flex: 1;
+}
+
+.nti-now {
+    font-family: Ruda;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Бегущая строка */
+.news {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #F8F8F8;
+    padding: 10px 0;
+    position: relative;
+}
+
+.news-slides {
+    display: inline-block;
+    animation: scroll-left 25s infinite linear;
+}
+
+.news-slides:hover {
+    animation-play-state: paused;
+}
+
+.slide {
+    display: inline-block;
+    max-width: 500px;
+    /* ширина одного блока */
+    margin-right: 50px;
+    /* отступ между блоками */
+}
+
+.slide-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.slide-description {
+    font-size: 14px;
+    color: #333;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Header блок */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+    border-left: solid 1px rgb(0, 0, 0);
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.header-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-schedule {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
+}
+
+/* Полезные ссылки */
+/* Контейнер выпадающего меню */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    margin-top: 8px;
+}
+
+/* Активное состояние (раскрыто) */
+.dropdown-content.active {
+    max-height: 600px;
+}
+
+/* Внутренний блок с отступами и ограниченной шириной */
+.dropdown-inner {
+    padding: 20px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #e6e6e6;
+}
+
+/* Гибкое расположение колонок */
+.dropdown-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Колонки с адаптивностью */
+.dropdown-column {
+    flex: 1 1 250px;
+    min-width: 200px;
+}
+
+/* Заголовки колонок */
+.dropdown-column h3 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #222;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* Ссылки с иконками */
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.25s ease;
+    cursor: pointer;
+}
+
+/* Иконки справа от текста */
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: grayscale(60%);
+    transition: filter 0.25s ease;
+}
+
+/* При наведении цвет иконки и текста меняется */
+.dropdown-link:hover {
+    color: #D20A11; /* Красный цвет как на сайте МФТИ */
+}
+
+  /* Основные стили секции */
+  .mission-section {
+    padding: 60px 0;
+    background-color: #fdfdfd; /* Фон на случай, если изображения не загрузятся */
+  }
+  
+  .mission-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .mission-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .mission-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Стили для блоков с фоновыми изображениями */
+  .with-bg-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 200px;
+  }
+  
+  /* Затемнение фона для лучшей читаемости текста */
+  .content-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Стили для текста поверх изображений */
+  .mission-main h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .mission-main p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .mission-highlight {
+    background-color: rgba(0, 51, 102, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: auto;
+  }
+  
+  /* Стили для карточек */
+  .mission-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mission-card {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s;
+    height: 200px;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .card-icon img {
+    width: 60px;
+    height: 60px;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+  
+  /* Стили для списка ссылок */
+  .mission-links {
+    flex-grow: 1;
+  }
+  
+  .mission-links h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .mission-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mission-links li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  
+  .mission-links li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .mission-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+  }
+  
+  .mission-links a:hover {
+    color: #FFD700;
+  }
+  
+  .mission-links img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgb(255, 255, 255);
+        }
+        
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #0066cc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .item-with-photo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .item-content {
+            flex: 1;
+        }
+        
+        .item-photo {
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #faf8f8;
+            border: 1px dashed #ccc;
+        }
+        
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .quotes {
+            color: #0066cc;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .priority-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0066cc;
+            transition: width 0.3s ease;
+        }
+        
+        .priority-link:hover::after {
+            width: 100%;
+        }
+
+

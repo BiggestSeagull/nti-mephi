@@ -281,7 +281,161 @@ body {
     to {
         transform: translateX(-50%);
     }
-}
+
+    }
+  .mission-section {
+    padding: 60px 0;
+    background-color: #fdfdfd; /* Фон на случай, если изображения не загрузятся */
+  }
+  
+  .mission-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+    height: 1100px;
+  }
+  
+  .mission-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .mission-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Стили для блоков с фоновыми изображениями */
+  .with-bg-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 100px;
+  }
+  
+  /* Затемнение фона для лучшей читаемости текста */
+  .content-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  /* Стили для текста поверх изображений */
+  .mission-main h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .mission-main p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(252, 252, 252, 0.9);
+  }
+  
+  .mission-highlight {
+    background-color: rgba(0, 51, 102, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: auto;
+  }
+  
+  /* Стили для карточек */
+  .mission-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mission-card {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s;
+    height: 200px;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .card-icon img {
+    width: 60px;
+    height: 100px;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+  
+  /* Стили для списка ссылок */
+  .mission-links {
+    flex-grow: 1;
+  }
+  
+  .mission-links h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .mission-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mission-links li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  
+  .mission-links li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .mission-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+  }
+  
+  .mission-links a:hover {
+    color: #FFD700;
+  }
+  
+  .mission-links img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
 
 /* Полезные ссылки */
 .dropdown-wrapper {

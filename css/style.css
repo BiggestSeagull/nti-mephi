@@ -110,6 +110,11 @@ body {
 }
 
 
+/* Header блок */
+.header {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
 
 /* НТИ — ядерный институт */
 .header-row {
@@ -126,14 +131,14 @@ body {
     flex: 1;
 }
 
-
-/* Header блок */
-
 /* Первая колонка */
 .header-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    /* Изменено с center на flex-start */
+    margin-bottom: 10px;
+    /* Добавлено отступ снизу */
 }
 
 .header-logo {
@@ -141,6 +146,8 @@ body {
     align-items: center;
     text-decoration: none;
     color: inherit;
+    margin-top: 10px;
+    /* Добавлен отступ сверху для логотипа */
 }
 
 .logo {
@@ -150,17 +157,23 @@ body {
 .header-name {
     display: flex;
     flex-direction: column;
-    border-left: solid 1px rgb(0, 0, 0);
     margin-left: 15px;
     padding-left: 15px;
+    margin-top: 10px;
+    color: #172027;
+    line-height: 110%;
+    border-left: solid 1px rgb(0, 0, 0);
 }
 
 .header-mephi-title {
-    margin: auto;
     padding: 10px;
     font-family: Ruda;
     font-size: 62px;
     font-weight: 900;
+    margin-top: 5px;
+    /* Уменьшен отступ сверху для заголовка */
+
+
 }
 
 /* Вторая колонка */
@@ -170,8 +183,7 @@ body {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    margin-top: 150px;
-    margin-left: 100px;
+    margin: auto;
     transition: all 0.25s;
     z-index: 10;
 }

@@ -294,7 +294,7 @@ body {
 
 .region-news {
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 1fr 400px;
     grid-column-gap: 48px;
     grid-row-gap: 72px;
 }
@@ -363,12 +363,12 @@ body {
 }
 
 .news-daily {
-    padding-left: 37px;
+    max-width: 330px;
 }
 
 .news-title-3 {
     color: #17171A;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .news-content-2 {
@@ -376,14 +376,40 @@ body {
     flex-direction: column;
     height: 965px;
     padding-right: 30px;
+    overflow-y: auto; 
 }
 
+.news-item {
+    margin-bottom: 26px;
+}
+.news-title-2 a {
+    text-decoration: none; 
+}
+.news-title-2 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+.news-title-4 {
+    color: #172027;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.news-date-2 {
+    color: #4E566A;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
 
 .news-footer {
     margin-top: 32px;
 }
 
-.more-link {
+.news-more-link {
     color: #0078F6;
     font-size: 24px;
     font-weight: 700;

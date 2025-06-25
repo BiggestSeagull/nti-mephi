@@ -502,12 +502,13 @@ body {
     flex-basis: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 120px;
 }
 
 .footer-menu {
     margin-top: 48px;
     display: flex;
-    gap: 126px;
+    gap: 60px;
 }
 
 .links-1 {
@@ -529,7 +530,6 @@ body {
 }
 
 .footer-menu .links-1 a:hover {
-    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     color: #0078f6;
@@ -541,8 +541,6 @@ body {
 }
 
 .footer-menu .links-2 a:hover {
-    font-size: 16px;
-    line-height: 36px;
     color: #0078f6;
 }
 
@@ -596,7 +594,7 @@ body {
     line-height: 110%;
 }
 
-.column-content{
+.column-content {
     display: flex;
     flex-direction: column;
     gap: 16px;

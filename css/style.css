@@ -110,6 +110,11 @@ body {
 }
 
 
+/* Header блок */
+.header {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
 
 /* НТИ — ядерный институт */
 .header-row {
@@ -127,14 +132,49 @@ body {
 }
 
 /* Первая колонка */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Изменено с center на flex-start */
+    margin-bottom: 10px;
+    /* Добавлено отступ снизу */
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 10px;
+    /* Добавлен отступ сверху для логотипа */
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-left: 15px;
+    margin-top: 10px;
+    color: #172027;
+    line-height: 110%;
+    border-left: solid 1px rgb(0, 0, 0);
+}
+
 .header-mephi-title {
-    margin: auto;
     padding: 10px;
     font-family: Ruda;
     font-size: 62px;
     font-weight: 900;
-}
+    margin-top: 5px;
+    /* Уменьшен отступ сверху для заголовка */
 
+
+}
 
 /* Вторая колонка */
 .front-header-video {
@@ -143,8 +183,7 @@ body {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    margin-top: 150px;
-    margin-left: 100px;
+    margin: auto;
     transition: all 0.25s;
     z-index: 10;
 }
@@ -242,48 +281,6 @@ body {
     to {
         transform: translateX(-50%);
     }
-}
-
-/* Header блок */
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-.logo {
-    margin-right: 10px;
-}
-
-.header-name {
-    display: flex;
-    flex-direction: column;
-    border-left: solid 1px rgb(0, 0, 0);
-    margin-left: 15px;
-    padding-left: 15px;
-}
-
-.header-date-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.header-schedule {
-    text-decoration: none;
-    color: inherit;
-    margin-top: 4px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 6px;
 }
 
 /* Полезные ссылки */

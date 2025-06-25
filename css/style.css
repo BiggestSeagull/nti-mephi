@@ -369,6 +369,7 @@ body {
 .news-title-3 {
     color: #17171A;
     font-size: 36px;
+    margin-bottom: 20px
 }
 
 .news-content-2 {
@@ -377,6 +378,18 @@ body {
     height: 965px;
     padding-right: 30px;
     overflow-y: auto; 
+}
+
+.news-content-2::-webkit-scrollbar {
+    width: 8px; 
+}
+.news-content-2::-webkit-scrollbar-thumb {
+    background-color: #0078F6;
+    border-radius: 10px;
+}
+.news-content-2::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 3px;
 }
 
 .news-item {
@@ -395,6 +408,11 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
+}
+
+.news-title-4 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
 }
 
 .news-date-2 {

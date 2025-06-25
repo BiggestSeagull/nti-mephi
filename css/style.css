@@ -238,7 +238,7 @@ body {
 }
 
 /* Бегущая строка */
-.news {
+.running-line {
     overflow: hidden;
     white-space: nowrap;
     background-color: #F8F8F8;
@@ -246,16 +246,16 @@ body {
     position: relative;
 }
 
-.news-slides {
+.running-line .slides {
     display: inline-block;
     animation: scroll-left 25s infinite linear;
 }
 
-.news-slides:hover {
+.running-line .slides:hover {
     animation-play-state: paused;
 }
 
-.slide {
+.running-line .slide {
     display: inline-block;
     max-width: 500px;
     /* ширина одного блока */
@@ -263,12 +263,12 @@ body {
     /* отступ между блоками */
 }
 
-.slide-title {
+.running-line .slide-title {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.slide-description {
+.running-line .slide-description {
     font-size: 14px;
     color: #333;
 }

@@ -427,11 +427,37 @@ body {
     margin-top: 32px;
 }
 
+.news-footer a:hover {
+    text-decoration: underline;
+}
+
 .news-more-link {
     color: #0078F6;
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
+}
+
+.news-button {
+    grid-column: 1 / span 2;
+}
+
+.news-button-link {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 60px;
+    background: #0078F6;
+    color: #FFF;
+    padding: 24px 44px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.news-button-link:hover {
+    background: #EF3E3B;
 }
 
 /* Полезные ссылки */

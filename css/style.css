@@ -321,15 +321,15 @@ body {
 
 .news-image {
     margin-bottom: 32px;
-    height: 200px; 
+    height: 200px;
     overflow: hidden;
 }
 
 .news-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-     object-position: center;
+    object-fit: cover;
+    object-position: center;
 }
 
 .news-date {
@@ -377,16 +377,18 @@ body {
     flex-direction: column;
     height: 965px;
     padding-right: 30px;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .news-content-2::-webkit-scrollbar {
-    width: 8px; 
+    width: 8px;
 }
+
 .news-content-2::-webkit-scrollbar-thumb {
     background-color: #0078F6;
     border-radius: 10px;
 }
+
 .news-content-2::-webkit-scrollbar-track {
     background: white;
     border-radius: 3px;
@@ -395,9 +397,11 @@ body {
 .news-item {
     margin-bottom: 26px;
 }
+
 .news-title-2 a {
-    text-decoration: none; 
+    text-decoration: none;
 }
+
 .news-title-2 a:hover {
     text-decoration: underline;
     text-decoration-thickness: 0.5px;
@@ -460,6 +464,249 @@ body {
     background: #EF3E3B;
 }
 
+.mission-section {
+    padding: 60px 0;
+    background-color: #fdfdfd;
+    /* Фон на случай, если изображения не загрузятся */
+}
+
+.mission-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+    height: 1040px;
+}
+
+.mission-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mission-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Стили для блоков с фоновыми изображениями */
+.with-bg-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+/* Затемнение фона для лучшей читаемости текста */
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: 0078F6;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Стили для текста поверх изображений */
+.mission-main h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.mission-main p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(252, 252, 252, 0.9);
+}
+
+.mission-highlight {
+    background-color: rgba(0, 51, 102, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+/* Стили для карточек */
+.mission-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission-card {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s;
+    height: 200px;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.card-icon img {
+    width: 60px;
+    height: 100px;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* Стили для списка ссылок */
+.mission-links {
+    flex-grow: 1;
+}
+
+.mission-links h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.mission-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mission-links li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+}
+
+.mission-links li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.mission-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0078F6;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.mission-links a:hover {
+    color: #FFD700;
+}
+
+.mission-links img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-with-photo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-photo {
+    flex: 0 0 auto;
+}
+
+.item-photo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-content a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.item-content a:hover {
+    text-decoration: underline;
+    text-decoration-color: #0078F6;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.quotes {
+    color: #0078F6 !important;
+}
+
+.mephi-join-section {
+    margin: 20px;
+    padding: 0px;
+}
+
+.mephi-join-section h2 {
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mephi-join-links {
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mephi-join-link {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+    flex: 1;
+    min-width: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transform: translateZ(0);
+    color: #0078F6;
+    border: 1px solid #0078F6;
+}
+
+.mephi-join-link:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Полезные ссылки */
 .dropdown-wrapper {
     position: relative;
@@ -468,25 +715,61 @@ body {
     z-index: 100;
 }
 
-/* Стили кнопки */
 .dropdown-button {
     background-color: transparent;
-    color: #333;
-    padding: 10px 15px;
-    font-size: 14px;
+    color: #0078F6;
+    padding: 12px 20px;
+    font-size: 20px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     font-weight: 600;
     white-space: nowrap;
     position: relative;
     z-index: 2;
 }
 
-.dropdown-button:hover {
-    color: #0066cc;
+/* Стили выпадающего блока */
+.dropdown-content {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    z-index: 1;
+    margin-top: -1px;
 }
+
+.dropdown-content.active {
+    max-height: 600px;
+}
+
+/* Основной контейнер */
+.dropdown-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/* Стили кнопки */
+.dropdown-button {
+    background-color: transparent;
+    color: #0078F6;
+    padding: 12px 20px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
 
 /* Стили выпадающего блока */
 .dropdown-content {
@@ -501,28 +784,27 @@ body {
 
 .dropdown-content.active {
     max-height: 600px;
-    /* Увеличили высоту для 4 строк */
 }
 
-/* Внутренний контейнер с контентом */
+/* Внутренний контейнер */
 .dropdown-inner {
     background-color: #fff;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 20px;
+    padding: 25px;
     width: 1200px;
-    /* Увеличили ширину для 4 колонок */
     margin: 0 auto;
     border-top: 1px solid #f0f0f0;
 }
 
 /* Заголовок меню */
 .dropdown-title {
-    font-size: 16px;
+    font-size: 24px;
+    font-family: 'Roboto Flex', sans-serif;
     font-weight: 600;
-    color: #0066cc;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
+    color: #0078F6;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -530,7 +812,6 @@ body {
 .dropdown-columns {
     display: flex;
     gap: 40px;
-    /* Увеличили отступ между колонками */
 }
 
 /* Стиль колонки */
@@ -540,118 +821,41 @@ body {
 
 /* Стили ссылок */
 .dropdown-content a {
-    color: #333;
-    padding: 10px 0;
-    /* Увеличили отступы */
+    color: #0078F6;
+    padding: 12px 0;
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 20px;
     transition: all 0.2s ease;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     border-bottom: 1px solid #f5f5f5;
     gap: 12px;
-    line-height: 1.4;
-    min-height: 44px;
-    /* Фиксированная высота строки */
-}
-
-.dropdown-content a:hover {
-    color: #0066cc;
-    background-color: #f9f9f9;
-}
-
-/* Стили иконок */
-.link-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.dropdown-button:hover {
-    color: #0066cc;
-}
-
-/* Стили выпадающего блока */
-.dropdown-content {
-    position: relative;
+    line-height: 1.5;
+    min-height: 48px;
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    z-index: 1;
-    margin-top: -1px;
+    /* Добавлено */
 }
 
-.dropdown-content.active {
-    max-height: 600px;
-    /* Увеличили высоту для 4 строк */
-}
-
-/* Внутренний контейнер с контентом */
-.dropdown-inner {
-    background-color: #fff;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 20px;
-    width: 1200px;
-    /* Увеличили ширину для 4 колонок */
-    margin: 0 auto;
-    border-top: 1px solid #f0f0f0;
-}
-
-/* Заголовок меню */
-.dropdown-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #0066cc;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-/* Контейнер для колонок */
-.dropdown-columns {
-    display: flex;
-    gap: 40px;
-    /* Увеличили отступ между колонками */
-}
-
-/* Стиль колонки */
-.dropdown-column {
-    flex: 1;
-}
-
-/* Стили ссылок */
-.dropdown-content a {
-    color: #333;
-    padding: 10px 0;
-    /* Увеличили отступы */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    transition: all 0.2s ease;
-    font-family: 'Open Sans', sans-serif;
-    border-bottom: 1px solid #f5f5f5;
-    gap: 12px;
-    line-height: 1.4;
-    min-height: 44px;
-    /* Фиксированная высота строки */
-}
-
-.dropdown-content a:hover {
-    color: #0066cc;
-    background-color: #f9f9f9;
-}
 
 /* Стили иконок */
 .link-icon {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+/* Новые стили для текста ссылки */
+.link-text {
+    flex-grow: 1;
+    /* Текст занимает все доступное пространство */
+    min-width: 0;
+    /* Позволяет тексту переноситься */
+    white-space: normal;
+    /* Разрешает перенос слов */
+    word-break: break-word;
+    /* Перенос длинных слов */
 }
 
 /* Стили для верней части футера */
@@ -804,3 +1008,137 @@ body {
     color: #ffffff;
     font-size: 18px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mission-values-strategy--->*/
+.our-mission {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#promo-wrapper {
+    padding: 0 105px;
+}
+
+#block-block-14 .content {
+    display: grid;
+    gap: 48px;
+    grid-template-areas:
+        'mephi-mission mephi-values'
+        'mephi-mission mephi-strategy';
+}
+
+.front-mission {
+    grid-area: mephi-mission;
+}
+
+.front-values {
+    grid-area: mephi-values;
+}
+
+.front-strategy {
+    grid-area: mephi-strategy;
+}
+
+.front-mission a,
+.front-values a,
+.front-strategy a {
+    padding: 40px 48px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.front-strategy a {
+    color: #000000;
+}
+
+.front-values a {
+    padding-top: 13px;
+}
+
+.front-mission__title,
+.front-values__title,
+.front-strategy__title {
+    font-family: Ruda;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 52px;
+    text-align: left;
+}
+
+.front-mission__title {
+    margin-bottom: 14px;
+}
+
+.front-mission__description-left,
+.front-mission__description-right {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27.3px;
+}
+
+.front-mission__description-left {
+    text-align: left;
+}
+
+.front-mission__description-right {
+    text-align: right;
+    margin-top: 3px;
+}
+
+.front-mission__description-left--bold,
+.front-mission__description-right--bold {
+    font-weight: 900;
+}
+
+.front-mission a {
+    display: block;
+    border-radius: 10px;
+    width: 576px;
+    height: 658px;
+    background-image: url(../assets/img/mission/background/image-mission.jpg);
+    transition: transform 0.5s;
+}
+
+.front-values a {
+    display: block;
+    border-radius: 10px;
+    width: 480px;
+    height: 305px;
+    background-image: url(../assets/img/mission/background/image-values.jpg);
+    transition: transform 0.5s;
+}
+
+.front-strategy a {
+    display: block;
+    border-radius: 10px;
+    width: 480px;
+    height: 305px;
+    background-image: url(../assets/img/mission/background/image-strategy.svg);
+    transition: transform 0.5s;
+    /* color: #111212; */
+}
+
+.front-mission a:hover,
+.front-values a:hover,
+.front-strategy a:hover {
+    transform: scale(1.05);
+}
+
+/*<---Mission-values-strategy*/

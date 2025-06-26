@@ -30,7 +30,7 @@ document.querySelectorAll('.nav-line li').forEach(function (item) {
 
 
 // Дублирование слайдов
-const slidesContainer = document.querySelector(".news-slides");
+const slidesContainer = document.querySelector(".slides");
 if (slidesContainer) {
     slidesContainer.innerHTML += slidesContainer.innerHTML;
 }

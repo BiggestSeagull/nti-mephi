@@ -246,33 +246,77 @@ body {
     position: relative;
 }
 
-.running-line .slides {
+.slides {
     display: inline-block;
-    animation: scroll-left 25s infinite linear;
+    animation: scroll-left 25s linear infinite;
+    white-space: nowrap;
+    background: #fff;
 }
 
-.running-line .slides:hover {
+.slides:hover {
     animation-play-state: paused;
 }
 
-.running-line .slide {
+.slide {
     display: inline-block;
+    vertical-align: top;
+    min-width: 400px;
     max-width: 500px;
-    /* ширина одного блока */
-    margin-right: 50px;
-    /* отступ между блоками */
+    background: #fff;
+    position: relative;
+    transition: box-shadow 0.3s;
+    white-space: normal;
+
+    margin: 20px 20px;
 }
 
-.running-line .slide-title {
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    /* фиксированное расстояние от верха */
+    right: -10px;
+    width: 12px;
+    height: 12px;
+    background-color: #0078F6;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+
+.slide a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.slide-title {
+    /* text-align: center; */
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: normal;
 }
 
-.running-line .slide-description {
+/* Раскрытие всех описаний при наведении на .slides */
+.slide-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 2s ease, opacity 2s ease;
     font-size: 14px;
-    color: #333;
+    margin-top: 10px;
+    max-width: 90%;
 }
 
+/* Плавное раскрытие при наведении на контейнер .slides */
+.slides:hover .slide-description {
+    max-height: 500px;
+    /* достаточно большое значение */
+    opacity: 1;
+}
+
+/* Анимация бегущей строки */
 @keyframes scroll-left {
     from {
         transform: translateX(0%);
@@ -282,6 +326,7 @@ body {
         transform: translateX(-50%);
     }
 }
+
 
 /* Стили для новостей */
 .news {

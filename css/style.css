@@ -298,20 +298,21 @@ body {
     white-space: normal;
 }
 
+/* Раскрытие всех описаний при наведении на .slides */
 .slide-description {
-    text-overflow: ellipsis;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    transition: max-height 2s ease, opacity 2s ease;
     font-size: 14px;
     margin-top: 10px;
     max-width: 90%;
 }
 
-/* Раскрытие всех описаний при наведении на .slides */
+/* Плавное раскрытие при наведении на контейнер .slides */
 .slides:hover .slide-description {
-    max-height: 100%;
-    /* или больше, если нужно */
+    max-height: 500px;
+    /* достаточно большое значение */
     opacity: 1;
 }
 

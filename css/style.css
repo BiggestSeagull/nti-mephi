@@ -250,6 +250,7 @@ body {
     display: inline-block;
     animation: scroll-left 25s linear infinite;
     white-space: nowrap;
+    background: #fff;
 }
 
 .slides:hover {
@@ -259,8 +260,8 @@ body {
 .slide {
     display: inline-block;
     vertical-align: top;
-    min-width: 200px;
-    max-width: 300px;
+    min-width: 400px;
+    max-width: 500px;
     margin-right: 20px;
     padding: 10px;
     background: #fff;
@@ -287,13 +288,13 @@ body {
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
     font-size: 14px;
-    color: #333;
     margin-top: 10px;
 }
 
-.slide:hover .slide-description {
+/* Раскрытие всех описаний при наведении на .slides */
+.slides:hover .slide-description {
     max-height: 200px;
-    /* достаточная высота */
+    /* или больше, если нужно */
     opacity: 1;
 }
 

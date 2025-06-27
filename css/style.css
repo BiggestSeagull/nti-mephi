@@ -19,6 +19,101 @@ body {
 .blue {
     color: #0078F6;
 }
+/* Базовая обёртка */
+#menu-komu {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  border-top: 2px solid #003da6; /* синий как на сайте МИФИ */
+}
+
+#menu-komu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #ffffff;
+}
+
+#menu-komu > ul > li {
+  position: relative;
+}
+
+#menu-komu > ul > li > a {
+  display: block;
+  padding: 14px 20px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  border-right: 1px solid #e0e0e0;
+  transition: background 0.3s, color 0.3s;
+}
+
+#menu-komu > ul > li > a:hover {
+  background: #f5f5f5;
+  color: #003da6;
+}
+
+/* Подменю первого уровня */
+#menu-komu li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 240px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#menu-komu li:hover > ul {
+  display: flex;
+}
+
+#menu-komu li ul li {
+  position: relative;
+}
+
+#menu-komu li ul li a {
+  padding: 12px 16px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#menu-komu li ul li a:hover {
+  background-color: #f0f0f0;
+  color: #003da6;
+}
+
+/* Подменю второго уровня (вправо) */
+#menu-komu li ul li ul {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+}
+
+/* Стрелки для пунктов с подменю */
+#menu-komu li > ul li:has(ul) > a::after {
+  content: "▶";
+  float: right;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #888;
+}
+
+#menu-komu > ul > li:has(ul) > a::after {
+  content: "▼";
+  margin-left: 6px;
+  font-size: 10px;
+  color: #888;
+}
+#menu-komu > ul > li:last-child > a {
+  border-right: none;
+}
+
 
 
 /* Layout wrapper */
@@ -36,61 +131,105 @@ body {
     background-color: #f0f0f0;
 }
 
-.nav-line {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-    background-color: #f0f0f0;
-    flex-wrap: wrap;
+/* Обёртка */
+#menu-vse-ostavnoe {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  border-top: 2px solid #003da6;
 }
 
-.nav-line ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+/* Основное меню (горизонтальное) */
+#menu-vse-ostavnoe > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #ffffff;
+  flex-wrap: wrap;
 }
 
-.nav-line li {
-    position: relative;
-    margin: 0 10px;
+/* Элементы первого уровня */
+#menu-vse-ostavnoe > ul > li {
+  position: relative;
 }
 
-.nav-line a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 15px;
-    display: block;
-    min-width: 150px;
+#menu-vse-ostavnoe > ul > li > a {
+  display: block;
+  padding: 14px 20px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  border-right: 1px solid #e0e0e0;
+  transition: background 0.3s, color 0.3s;
 }
 
-.nav-line ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    z-index: 1000;
-    width: auto;
-    box-sizing: border-box;
+/* Убираем правую границу у последнего */
+#menu-vse-ostavnoe > ul > li:last-child > a {
+  border-right: none;
 }
 
-.nav-line ul ul li {
-    white-space: nowrap;
-    padding: 0;
+/* Ховер эффект */
+#menu-vse-ostavnoe > ul > li > a:hover {
+  background: #f5f5f5;
+  color: #003da6;
 }
 
-.nav-line ul ul ul {
-    left: 100%;
-    top: 0;
+/* Подменю */
+#menu-vse-ostavnoe li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 240px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.nav-line li a:hover {
-    background-color: #eee;
+#menu-vse-ostavnoe li:open > ul {
+  display: flex;
+}
+
+#menu-vse-ostavnoe li ul li {
+  position: relative;
+}
+
+#menu-vse-ostavnoe li ul li a {
+  padding: 12px 16px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#menu-vse-ostavnoe li ul li a:hover {
+  background-color: #f0f0f0;
+  color: #003da6;
+}
+
+/* Подменю второго уровня */
+#menu-vse-ostavnoe li ul li ul {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+}
+
+/* Стрелки */
+#menu-vse-ostavnoe li > ul li:has(ul) > a::after {
+  content: "▶";
+  float: right;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #888;
+}
+
+#menu-vse-ostavnoe > ul > li:has(ul) > a::after {
+  content: "▼";
+  margin-left: 6px;
+  font-size: 10px;
+  color: #888;
 }
 
 /* Общий контейнер с отступами */
@@ -294,7 +433,7 @@ body {
 
 .region-news {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    /* grid-template-columns: 1fr 400px; */
     grid-column-gap: 48px;
     grid-row-gap: 72px;
 }

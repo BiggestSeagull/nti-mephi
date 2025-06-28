@@ -110,11 +110,6 @@ body {
 }
 
 
-/* Header блок */
-.header {
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
 
 /* НТИ — ядерный институт */
 .header-row {
@@ -132,49 +127,14 @@ body {
 }
 
 /* Первая колонка */
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* Изменено с center на flex-start */
-    margin-bottom: 10px;
-    /* Добавлено отступ снизу */
-}
-
-.header-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    margin-top: 10px;
-    /* Добавлен отступ сверху для логотипа */
-}
-
-.logo {
-    margin-right: 10px;
-}
-
-.header-name {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-    padding-left: 15px;
-    margin-top: 10px;
-    color: #172027;
-    line-height: 110%;
-    border-left: solid 1px rgb(0, 0, 0);
-}
-
 .header-mephi-title {
+    margin: auto;
     padding: 10px;
     font-family: Ruda;
     font-size: 62px;
     font-weight: 900;
-    margin-top: 5px;
-    /* Уменьшен отступ сверху для заголовка */
-
-
 }
+
 
 /* Вторая колонка */
 .front-header-video {
@@ -183,7 +143,8 @@ body {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    margin: auto;
+    margin-top: 150px;
+    margin-left: 100px;
     transition: all 0.25s;
     z-index: 10;
 }
@@ -238,7 +199,7 @@ body {
 }
 
 /* Бегущая строка */
-.running-line {
+.news {
     overflow: hidden;
     white-space: nowrap;
     background-color: #F8F8F8;
@@ -246,77 +207,33 @@ body {
     position: relative;
 }
 
-.slides {
+.news-slides {
     display: inline-block;
-    animation: scroll-left 25s linear infinite;
-    white-space: nowrap;
-    background: #fff;
+    animation: scroll-left 25s infinite linear;
 }
 
-.slides:hover {
+.news-slides:hover {
     animation-play-state: paused;
 }
 
 .slide {
     display: inline-block;
-    vertical-align: top;
-    min-width: 400px;
     max-width: 500px;
-    background: #fff;
-    position: relative;
-    transition: box-shadow 0.3s;
-    white-space: normal;
-
-    margin: 20px 20px;
-}
-
-.slide::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    /* фиксированное расстояние от верха */
-    right: -10px;
-    width: 12px;
-    height: 12px;
-    background-color: #0078F6;
-    border-radius: 50%;
-    margin-left: 30px;
-    margin-right: 10px;
-}
-
-
-.slide a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+    /* ширина одного блока */
+    margin-right: 50px;
+    /* отступ между блоками */
 }
 
 .slide-title {
-    /* text-align: center; */
     font-weight: bold;
     margin-bottom: 5px;
-    white-space: normal;
 }
 
-/* Раскрытие всех описаний при наведении на .slides */
 .slide-description {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 2s ease, opacity 2s ease;
     font-size: 14px;
-    margin-top: 10px;
-    max-width: 90%;
+    color: #333;
 }
 
-/* Плавное раскрытие при наведении на контейнер .slides */
-.slides:hover .slide-description {
-    max-height: 500px;
-    /* достаточно большое значение */
-    opacity: 1;
-}
-
-/* Анимация бегущей строки */
 @keyframes scroll-left {
     from {
         transform: translateX(0%);
@@ -327,429 +244,46 @@ body {
     }
 }
 
-
-/* Стили для новостей */
-.news {
-    background: #E1E4EB;
-    padding-left: 105px;
-    padding-right: 105px;
-    padding-top: 112px;
-    padding-bottom: 72px;
-}
-
-.region-news {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    grid-column-gap: 48px;
-    grid-row-gap: 72px;
-}
-
-.news-title {
-    color: #17171A;
-    font-size: 50px;
-}
-
-.news-content-1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 48px;
-}
-
-.news-column {
+/* Header блок */
+.header-top {
     display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    margin: 0;
-    width: 260px;
-    padding-bottom: 32px !important;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.news-image {
-    margin-bottom: 32px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.news-date {
-    padding-left: 24px;
-    color: #4E566A;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 120%;
-    margin-bottom: 8px;
-}
-
-.news-title-2 {
-    margin-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-    color: #172027;
-    text-overflow: ellipsis;
-    font-size: 20px;
-    letter-spacing: 0.24px;
-}
-
-.news-rubric {
-    display: flex;
-    margin-top: auto;
-    padding: 0 24px;
-    color: #0078F6;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 150%;
-    text-transform: uppercase;
-}
-
-.news-daily {
-    max-width: 330px;
-}
-
-.news-title-3 {
-    color: #17171A;
-    font-size: 36px;
-    margin-bottom: 20px
-}
-
-.news-content-2 {
-    display: flex;
-    flex-direction: column;
-    height: 965px;
-    padding-right: 30px;
-    overflow-y: auto;
-}
-
-.news-content-2::-webkit-scrollbar {
-    width: 8px;
-}
-
-.news-content-2::-webkit-scrollbar-thumb {
-    background-color: #0078F6;
-    border-radius: 10px;
-}
-
-.news-content-2::-webkit-scrollbar-track {
-    background: white;
-    border-radius: 3px;
-}
-
-.news-item {
-    margin-bottom: 26px;
-}
-
-.news-title-2 a {
-    text-decoration: none;
-}
-
-.news-title-2 a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 0.5px;
-}
-
-.news-title-4 {
-    color: #172027;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.news-title-4 a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 0.5px;
-}
-
-.news-date-2 {
-    color: #4E566A;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 120%;
-    margin-bottom: 8px;
-}
-
-.news-footer {
-    margin-top: 32px;
-}
-
-.news-footer a:hover {
-    text-decoration: underline;
-}
-
-.news-more-link {
-    color: #0078F6;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-}
-
-.news-button {
-    grid-column: 1 / span 2;
-}
-
-.news-button-link {
-    display: block;
-    width: 300px;
-    margin: 0 auto;
-    border-radius: 60px;
-    background: #0078F6;
-    color: #FFF;
-    padding: 24px 44px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 120%;
-}
-
-.news-button-link:hover {
-    background: #EF3E3B;
-}
-
-.mission-section {
-    padding: 60px 0;
-    background-color: #fdfdfd;
-    /* Фон на случай, если изображения не загрузятся */
-}
-
-.mission-container {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    gap: 30px;
-    height: 1040px;
-}
-
-.mission-left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.mission-right {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Стили для блоков с фоновыми изображениями */
-.with-bg-image {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-    overflow: hidden;
-    min-height: 100px;
-}
-
-/* Затемнение фона для лучшей читаемости текста */
-.content-overlay {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    color: 0078F6;
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Стили для текста поверх изображений */
-.mission-main h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
-}
-
-.mission-main p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: rgba(252, 252, 252, 0.9);
-}
-
-.mission-highlight {
-    background-color: rgba(0, 51, 102, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    font-weight: 500;
-    margin-top: auto;
-}
-
-/* Стили для карточек */
-.mission-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mission-card {
-    display: block;
-    text-decoration: none;
-    transition: transform 0.3s;
-    height: 200px;
-}
-
-.mission-card:hover {
-    transform: translateY(-5px);
-}
-
-.mission-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: rgb(0, 0, 0);
-}
-
-.card-icon img {
-    width: 60px;
-    height: 100px;
-    margin-top: auto;
-    align-self: flex-end;
-}
-
-/* Стили для списка ссылок */
-.mission-links {
-    flex-grow: 1;
-}
-
-.mission-links h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
-}
-
-.mission-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mission-links li {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgb(255, 255, 255) !important;
-}
-
-.mission-links li:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.mission-links a {
+.header-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #0078F6;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 14px;
-}
-
-.mission-links a:hover {
-    color: #FFD700;
-}
-
-.mission-links img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.items-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.item-with-photo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.item-photo {
-    flex: 0 0 auto;
-}
-
-.item-photo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.item-content {
-    flex: 1;
-}
-
-.item-content a {
     text-decoration: none;
     color: inherit;
-    font-weight: 500;
-    position: relative;
-    display: inline-block;
 }
 
-.item-content a:hover {
-    text-decoration: underline;
-    text-decoration-color: #0078F6;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
+.logo {
+    margin-right: 10px;
 }
 
-.quotes {
-    color: #0078F6 !important;
-}
-
-.mephi-join-section {
-    margin: 20px;
-    padding: 0px;
-}
-
-.mephi-join-section h2 {
-    font-size: 48px;
-    color: #000000;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.mephi-join-links {
+.header-name {
     display: flex;
-    gap: 70px;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
+    border-left: solid 1px rgb(0, 0, 0);
+    margin-left: 15px;
+    padding-left: 15px;
 }
 
-.mephi-join-link {
-    display: inline-block;
-    padding: 10px 30px;
+.header-date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-schedule {
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    text-align: center;
-    user-select: none;
-    flex: 1;
-    min-width: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    transform: translateZ(0);
-    color: #0078F6;
-    border: 1px solid #0078F6;
-}
-
-.mephi-join-link:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: inherit;
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
 }
 
 /* Полезные ссылки */
@@ -760,61 +294,25 @@ body {
     z-index: 100;
 }
 
-.dropdown-button {
-    background-color: transparent;
-    color: #0078F6;
-    padding: 12px 20px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Roboto Flex', sans-serif;
-    font-weight: 600;
-    white-space: nowrap;
-    position: relative;
-    z-index: 2;
-}
-
-/* Стили выпадающего блока */
-.dropdown-content {
-    position: relative;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    z-index: 1;
-    margin-top: -1px;
-}
-
-.dropdown-content.active {
-    max-height: 600px;
-}
-
-/* Основной контейнер */
-.dropdown-wrapper {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    z-index: 100;
-    font-family: 'Roboto Flex', sans-serif;
-}
-
 /* Стили кнопки */
 .dropdown-button {
     background-color: transparent;
-    color: #0078F6;
-    padding: 12px 20px;
-    font-size: 24px;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     white-space: nowrap;
     position: relative;
     z-index: 2;
 }
 
+.dropdown-button:hover {
+    color: #0066cc;
+}
 
 /* Стили выпадающего блока */
 .dropdown-content {
@@ -829,27 +327,28 @@ body {
 
 .dropdown-content.active {
     max-height: 600px;
+    /* Увеличили высоту для 4 строк */
 }
 
-/* Внутренний контейнер */
+/* Внутренний контейнер с контентом */
 .dropdown-inner {
     background-color: #fff;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    padding: 25px;
+    padding: 20px;
     width: 1200px;
+    /* Увеличили ширину для 4 колонок */
     margin: 0 auto;
     border-top: 1px solid #f0f0f0;
 }
 
 /* Заголовок меню */
 .dropdown-title {
-    font-size: 24px;
-    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
     font-weight: 600;
-    color: #0078F6;
-    margin-bottom: 24px;
-    padding-bottom: 10px;
+    color: #0066cc;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -857,6 +356,7 @@ body {
 .dropdown-columns {
     display: flex;
     gap: 40px;
+    /* Увеличили отступ между колонками */
 }
 
 /* Стиль колонки */
@@ -866,324 +366,129 @@ body {
 
 /* Стили ссылок */
 .dropdown-content a {
-    color: #0078F6;
-    padding: 12px 0;
+    color: #333;
+    padding: 10px 0;
+    /* Увеличили отступы */
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 14px;
     transition: all 0.2s ease;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-bottom: 1px solid #f5f5f5;
     gap: 12px;
-    line-height: 1.5;
-    min-height: 48px;
-    width: 100%;
-    /* Добавлено */
+    line-height: 1.4;
+    min-height: 44px;
+    /* Фиксированная высота строки */
 }
 
+.dropdown-content a:hover {
+    color: #0066cc;
+    background-color: #f9f9f9;
+}
 
 /* Стили иконок */
 .link-icon {
-    width: 50px;
-    height: 50px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
-/* Новые стили для текста ссылки */
-.link-text {
-    flex-grow: 1;
-    /* Текст занимает все доступное пространство */
-    min-width: 0;
-    /* Позволяет тексту переноситься */
-    white-space: normal;
-    /* Разрешает перенос слов */
-    word-break: break-word;
-    /* Перенос длинных слов */
+.dropdown-button:hover {
+    color: #0066cc;
 }
 
-/* Стили для верней части футера */
-.footer-tab-1 {
-    background-color: #f2f4f8;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 30px 100px 30px 100px;
-    justify-content: space-between;
-    align-items: center;
+/* Стили выпадающего блока */
+.dropdown-content {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    z-index: 1;
+    margin-top: -1px;
 }
 
-.social {
-    display: flex;
-    height: 40px;
-    align-items: center;
-    gap: 34px;
+.dropdown-content.active {
+    max-height: 600px;
+    /* Увеличили высоту для 4 строк */
 }
 
-.info {
-    margin-top: 32px;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 120px;
+/* Внутренний контейнер с контентом */
+.dropdown-inner {
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    width: 1200px;
+    /* Увеличили ширину для 4 колонок */
+    margin: 0 auto;
+    border-top: 1px solid #f0f0f0;
 }
 
-.footer-menu {
-    margin-top: 48px;
-    display: flex;
-    gap: 60px;
-}
-
-.links-1 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.links-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-menu .links-1 a {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-}
-
-.footer-menu .links-1 a:hover {
-    font-style: normal;
-    font-weight: 500;
-    color: #0078f6;
-}
-
-.footer-menu .links-2 a {
-    font-size: 14px;
-    line-height: 36px;
-}
-
-.footer-menu .links-2 a:hover {
-    color: #0078f6;
-}
-
-.information {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 478px;
-    padding: 48px;
-    color: #626c84;
-    font-size: 14px;
-    line-height: 150%;
-    background: #ffffff;
-}
-
-.information a {
-    color: #17171a;
-    font-size: 14px;
-}
-
-.information a:hover {
-    color: #0078f6;
-    font-size: 14px;
-}
-
-.footer-title-1 {
-    color: #4e566a;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 150%;
-}
-
-/* Стили на нижней части футера */
-.footer-tab-2 {
-    background-color: #3b414f;
-    padding: 65px 105px;
-}
-
-.footer-title-2 {
-    margin: 0;
-    margin-bottom: 32px;
-    color: #ffffff;
-    line-height: 130%;
-}
-
-.column-title {
-    margin-bottom: 32px;
-    color: #ffffff;
-    font-size: 20px;
+/* Заголовок меню */
+.dropdown-title {
+    font-size: 16px;
     font-weight: 600;
-    line-height: 110%;
+    color: #0066cc;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.column-content {
+/* Контейнер для колонок */
+.dropdown-columns {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: #a1a7b5;
+    gap: 40px;
+    /* Увеличили отступ между колонками */
+}
+
+/* Стиль колонки */
+.dropdown-column {
+    flex: 1;
+}
+
+/* Стили ссылок */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 0;
+    /* Увеличили отступы */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     font-size: 14px;
-    line-height: 120%;
+    transition: all 0.2s ease;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #f5f5f5;
+    gap: 12px;
+    line-height: 1.4;
+    min-height: 44px;
+    /* Фиксированная высота строки */
 }
 
-.content .column .column-content a {
-    color: #ffffff;
-    text-decoration: none;
+.dropdown-content a:hover {
+    color: #0066cc;
+    background-color: #f9f9f9;
 }
 
-.content .column .column-content a:hover {
-    color: #ffffff;
-    text-decoration: none;
-    color: #0078f6;
+/* Стили иконок */
+.link-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.content {
-    display: flex;
-    gap: 100px;
+
+.footer-tab-1 {
+    background-color: rgb(108, 214, 98);
 }
 
-.column-1 {
-    width: 476px;
+.footer-tab-2 {
+    background-color: rgb(110, 98, 214);
 }
 
 .footer-tab-3 {
-    background-color: #2e3443;
-    display: flex;
-    padding: 30px 105px;
-    color: #ffffff;
-    font-size: 18px;
+    background-color: rgb(170, 103, 209)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Mission-values-strategy--->*/
-.our-mission {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#promo-wrapper {
-    padding: 0 105px;
-}
-
-#block-block-14 .content {
-    display: grid;
-    gap: 48px;
-    grid-template-areas:
-        'mephi-mission mephi-values'
-        'mephi-mission mephi-strategy';
-}
-
-.front-mission {
-    grid-area: mephi-mission;
-}
-
-.front-values {
-    grid-area: mephi-values;
-}
-
-.front-strategy {
-    grid-area: mephi-strategy;
-}
-
-.front-mission a,
-.front-values a,
-.front-strategy a {
-    padding: 40px 48px;
-    box-sizing: border-box;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.front-strategy a {
-    color: #000000;
-}
-
-.front-values a {
-    padding-top: 13px;
-}
-
-.front-mission__title,
-.front-values__title,
-.front-strategy__title {
-    font-family: Ruda;
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 52px;
-    text-align: left;
-}
-
-.front-mission__title {
-    margin-bottom: 14px;
-}
-
-.front-mission__description-left,
-.front-mission__description-right {
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27.3px;
-}
-
-.front-mission__description-left {
-    text-align: left;
-}
-
-.front-mission__description-right {
-    text-align: right;
-    margin-top: 3px;
-}
-
-.front-mission__description-left--bold,
-.front-mission__description-right--bold {
-    font-weight: 900;
-}
-
-.front-mission a {
-    display: block;
-    border-radius: 10px;
-    width: 576px;
-    height: 658px;
-    background-image: url(../assets/img/mission/background/image-mission.jpg);
-    transition: transform 0.5s;
-}
-
-.front-values a {
-    display: block;
-    border-radius: 10px;
-    width: 480px;
-    height: 305px;
-    background-image: url(../assets/img/mission/background/image-values.jpg);
-    transition: transform 0.5s;
-}
-
-.front-strategy a {
-    display: block;
-    border-radius: 10px;
-    width: 480px;
-    height: 305px;
-    background-image: url(../assets/img/mission/background/image-strategy.svg);
-    transition: transform 0.5s;
-    /* color: #111212; */
-}
-
-.front-mission a:hover,
-.front-values a:hover,
-.front-strategy a:hover {
-    transform: scale(1.05);
-}
-
-/*<---Mission-values-strategy*/

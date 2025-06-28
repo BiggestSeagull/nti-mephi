@@ -136,9 +136,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* Изменено с center на flex-start */
-    margin-bottom: 10px;
-    /* Добавлено отступ снизу */
 }
 
 .header-logo {
@@ -151,7 +148,8 @@ body {
 }
 
 .logo {
-    margin-right: 10px;
+    height: 120%;
+    width: 120%;
 }
 
 .header-name {
@@ -163,6 +161,7 @@ body {
     color: #172027;
     line-height: 110%;
     border-left: solid 1px rgb(0, 0, 0);
+    white-space: nowrap;
 }
 
 .header-mephi-title {
@@ -170,7 +169,7 @@ body {
     font-family: Ruda;
     font-size: 62px;
     font-weight: 900;
-    margin-top: 5px;
+    margin-top: 20px;
     /* Уменьшен отступ сверху для заголовка */
 
 

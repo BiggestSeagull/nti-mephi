@@ -8,8 +8,10 @@
   <!-- туду Сюда иконку для вкладки. НО!! Сначала преобразовать картинку в формат .ico Например тут: https://favicon.io/-->
   <link rel="icon" href="#">
   <link rel="stylesheet" href="./css/style-reset.css" />
+  <link rel="stylesheet" href="./css/glide.core.min.css">
+  <link rel="stylesheet" href="./css/glide.theme.min.css">
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/study-programs.css" />
+  <link rel="stylesheet" href="./css/study-programs.css">
 </head>
 
 <body>
@@ -534,6 +536,47 @@
 
     <div class="mephi-life">
       <!-- Сюда вставлять код. Для Семёна -->
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/1.jpg" alt="1"></a>
+            </li>
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/2.jpg" alt="2"></a>
+            </li>
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/3.jpg" alt="3"></a>
+            </li>
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/4.jpg" alt="4"></a>
+            </li>
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/5.jpg" alt="5"></a>
+            </li>
+            <li class="glide__slide">
+              <a href="#"><img src="./assets/img/6.jpg" alt="6"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="22" fill="#87CEEB" />
+              <polyline points="28,14 20,24 28,34" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <svg width="48" height="48" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="22" fill="#87CEEB" /> <!-- Голубой круг -->
+              <polyline points="20,14 28,24 20,34" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Настя и Соня -->
@@ -1056,7 +1099,28 @@
 
   </div>
 
-  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" async src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/glide.min.js"></script>
+  <!-- Оставить здесь, иначе ломается -->
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      startAt: 0,
+      perView: 5,
+      autoplay: 0,
+      hoverpause: true,
+      animationDuration: 120,
+      gap: 40,
+      // breakpoints: {
+      //   1200: {
+      //     perView: 2
+      //   },
+      //   800: {
+      //     perView: 1
+      //   }
+      // }
+    }).mount()
+  </script>
 </body>
 
 </html>

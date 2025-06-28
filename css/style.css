@@ -328,6 +328,12 @@ body {
 }
 
 
+/* Стили слайдшоу Glide.js */
+.mephi-life {
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
 /* Стили для новостей */
 .news {
     background: #E1E4EB;

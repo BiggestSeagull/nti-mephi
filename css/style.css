@@ -136,9 +136,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* Изменено с center на flex-start */
-    margin-bottom: 10px;
-    /* Добавлено отступ снизу */
 }
 
 .header-logo {
@@ -151,7 +148,8 @@ body {
 }
 
 .logo {
-    margin-right: 10px;
+    height: 120%;
+    width: 120%;
 }
 
 .header-name {
@@ -163,6 +161,7 @@ body {
     color: #172027;
     line-height: 110%;
     border-left: solid 1px rgb(0, 0, 0);
+    white-space: nowrap;
 }
 
 .header-mephi-title {
@@ -170,7 +169,7 @@ body {
     font-family: Ruda;
     font-size: 62px;
     font-weight: 900;
-    margin-top: 5px;
+    margin-top: 20px;
     /* Уменьшен отступ сверху для заголовка */
 
 
@@ -765,14 +764,47 @@ body {
     padding: 0;
     z-index: 100;
     font-family: 'Roboto Flex', sans-serif;
-    background-color: #f2f4f8; 
+    background-color: #f2f4f8;
 }
+
+.dropdown-button {
+    background-color: transparent;
+    color: #0078F6;
+    padding: 12px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Стили выпадающего блока */
+.dropdown-content {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    z-index: 1;
+    margin-top: -1px;
+}
+
+.dropdown-content.active {
+    max-height: 600px;
+}
+
+
 
 /* Стили кнопки */
 .dropdown-button {
-    background-color: #f2f4f8; 
-    color: #0078f6;;
-    padding: 12px 20px ;
+    background-color: #f2f4f8;
+    color: #0078f6;
+    ;
+    padding: 12px 20px;
     font-size: 20px;
     border: none;
     cursor: pointer;
@@ -799,22 +831,20 @@ body {
     transition: max-height 0.4s ease-out;
     z-index: 1;
     margin-top: -1px;
-    background-color: #f2f4f8; 
-  
-    
+    background-color: #f2f4f8;
+
+
 }
 
 .dropdown-content.active {
     max-height: 600px;
-    
-    
 }
 
 /* Внутренний контейнер */
 .dropdown-inner {
-    background-color: #f2f4f8; 
+    background-color: #f2f4f8;
     border-radius: 0 0 8px 8px;
-   
+
     width: 1200px;
     margin: 0 auto;
     border-top: 1px solid #f2f4f8;
@@ -843,12 +873,11 @@ body {
 /* Стиль колонки */
 .dropdown-column {
     flex: 1;
-    
 }
 
 /* Стили ссылок */
 .dropdown-content a {
-    background-color: #f2f4f8; 
+    background-color: #f2f4f8;
     color: #0078f6;
     padding: 12px 0;
     text-decoration: none;
@@ -861,13 +890,13 @@ body {
     gap: 12px;
     line-height: 1.5;
     min-height: 48px;
-    height: 100px;
-   
+    width: 100%;
+    /* Добавлено */
 }
 
 .dropdown-content a:hover {
     color: #0078F6;
-    background-color: #f2f4f8; 
+    background-color: #f2f4f8;
 }
 
 /* Стили иконок */
@@ -878,7 +907,17 @@ body {
     flex-shrink: 0;
 }
 
-
+/* Новые стили для текста ссылки */
+.link-text {
+    flex-grow: 1;
+    /* Текст занимает все доступное пространство */
+    min-width: 0;
+    /* Позволяет тексту переноситься */
+    white-space: normal;
+    /* Разрешает перенос слов */
+    word-break: break-word;
+    /* Перенос длинных слов */
+}
 
 /* Стили для верней части футера */
 .footer-tab-1 {

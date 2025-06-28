@@ -35,26 +35,6 @@ if (slidesContainer) {
     slidesContainer.innerHTML += slidesContainer.innerHTML;
 }
 
-// Слайдер
-new Glide('.glide', {
-    type: 'carousel',
-    startAt: 0,
-    perView: 3,
-    autoplay: 3000,
-    hoverpause: true,
-    animationDuration: 800,
-    gap: 20,
-    breakpoints: {
-        1200: {
-            perView: 2
-        },
-        800: {
-            perView: 1
-        }
-    }
-}).mount()
-
-
 // Полезные ссылки
 const dropdownButton = document.getElementById('dropdownButton');
 const dropdownContent = document.getElementById('dropdownContent');

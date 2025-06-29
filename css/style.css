@@ -20,7 +20,6 @@ body {
     color: #0078F6;
 }
 
-
 /* Layout wrapper */
 .layout {
     display: flex;
@@ -30,68 +29,120 @@ body {
     margin: 0 auto;
 }
 
-/* Стилизация навигации */
-.nav-wrapper {
-    width: 100%;
-    background-color: #f0f0f0;
+#menu-main, #menu-other {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
 }
 
-.nav-line {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-    background-color: #f0f0f0;
-    flex-wrap: wrap;
+#menu-other {
+   background: #0057b8;
 }
 
-.nav-line ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+#menu-main ul, #menu-other ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 
-.nav-line li {
-    position: relative;
-    margin: 0 10px;
+#menu-main > ul > li, #menu-other > ul > li {
+  position: relative;
+}
+#menu-main > ul > li > a{
+    color: #000000;
 }
 
-.nav-line a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 15px;
-    display: block;
-    min-width: 150px;
+#menu-other > ul > li > a{
+    color: #ffffff;
 }
 
-.nav-line ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    z-index: 1000;
-    width: auto;
-    box-sizing: border-box;
+#menu-main > ul > li > a,
+#menu-other > ul > li > a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-right: 1px solid #e0e0e0;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.nav-line ul ul li {
-    white-space: nowrap;
-    padding: 0;
+#menu-main > ul > li:last-child > a,
+#menu-other > ul > li:last-child > a {
+  border-right: none;
 }
 
-.nav-line ul ul ul {
-    left: 100%;
-    top: 0;
+#menu-main > ul > li > a:hover,
+#menu-other > ul > li > a:hover {
+  background: #f5f5f5;
+  color: #003da6;
 }
 
-.nav-line li a:hover {
-    background-color: #eee;
+/* Подменю */
+#menu-main li ul,
+#menu-other li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f7f9ff; /* Отличается от белого основного меню */
+  min-width: 220px;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
+
+#menu-main li ul li a,
+#menu-other li ul li a {
+  padding: 10px 14px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+#menu-main li:hover > ul, #menu-other li:hover > ul {
+  display: flex;
+}
+
+
+#menu-main li ul li a:hover,
+#menu-other li ul li a:hover {
+  background-color: #e6efff;
+  color: #003da6;
+}
+
+/* Подменю второго уровня */
+#menu-main li ul li ul,
+#menu-other li ul li ul {
+  top: 0;
+  left: 100%;
+  background-color: #ddeaff; /* ещё более отличимый фон */
+  /* margin-left: 1px; */
+}
+
+/* Стрелки */
+#menu-main li > ul li:has(ul) > a::after,
+#menu-other li > ul li:has(ul) > a::after {
+  content: "▶";
+  float: right;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #888;
+}
+
+#menu-main > ul > li:has(ul) > a::after,
+#menu-other > ul > li:has(ul) > a::after {
+  content: "▼";
+  margin-left: 6px;
+  font-size: 10px;
+  color: #888;
+}
+
 
 /* Общий контейнер с отступами */
 .container {

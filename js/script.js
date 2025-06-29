@@ -1,32 +1,32 @@
-// Навигация
-document.querySelectorAll('.nav-line li').forEach(function (item) {
-    item.addEventListener('mouseenter', function () {
-        const submenu = this.querySelector('ul');
-        if (submenu) {
-            submenu.style.display = 'block';
+// // Навигация
+// document.querySelectorAll('.nav-line li').forEach(function (item) {
+//     item.addEventListener('mouseenter', function () {
+//         const submenu = this.querySelector('ul');
+//         if (submenu) {
+//             submenu.style.display = 'block';
 
-            // Сбрасываем стиль перед вычислениями
-            submenu.style.left = '0';
-            submenu.style.right = 'auto';
+//             // Сбрасываем стиль перед вычислениями
+//             submenu.style.left = '0';
+//             submenu.style.right = 'auto';
 
-            // Получаем позицию и размеры подменю и родительского элемента
-            const rect = submenu.getBoundingClientRect();
+//             // Получаем позицию и размеры подменю и родительского элемента
+//             const rect = submenu.getBoundingClientRect();
 
-            // Проверяем, выходит ли подменю за правую границу
-            if (rect.right > window.innerWidth) {
-                submenu.style.left = 'auto';
-                submenu.style.right = '0';
-            }
-        }
-    });
+//             // Проверяем, выходит ли подменю за правую границу
+//             if (rect.right > window.innerWidth) {
+//                 submenu.style.left = 'auto';
+//                 submenu.style.right = '0';
+//             }
+//         }
+//     });
 
-    item.addEventListener('mouseleave', function () {
-        const submenu = this.querySelector('ul');
-        if (submenu) {
-            submenu.style.display = 'none';
-        }
-    });
-});
+//     item.addEventListener('mouseleave', function () {
+//         const submenu = this.querySelector('ul');
+//         if (submenu) {
+//             submenu.style.display = 'none';
+//         }
+//     });
+// });
 
 
 // Дублирование слайдов
